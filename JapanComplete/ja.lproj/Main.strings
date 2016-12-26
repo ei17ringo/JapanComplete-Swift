@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Your Score:20% 10/47"; ObjectID = "1JM-x3-xip"; */
+"1JM-x3-xip.text" = "Your Score:20% 10/47";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "TAR-eC-RLY"; */
+"TAR-eC-RLY.title" = "Map";
+
+/* Class = "UINavigationItem"; title = "Your Japan Map"; ObjectID = "YkV-RH-rFN"; */
+"YkV-RH-rFN.title" = "Your Japan Map";
+
+/* Class = "UIButton"; normalTitle = "share"; ObjectID = "a4w-UR-0V2"; */
+"a4w-UR-0V2.normalTitle" = "share";
+
+/* Class = "UITabBarItem"; title = "Setting"; ObjectID = "cPh-Nt-uzw"; */
+"cPh-Nt-uzw.title" = "Setting";
+
+/* Class = "UIButton"; normalTitle = "?"; ObjectID = "i0C-Q0-9kq"; */
+"i0C-Q0-9kq.normalTitle" = "?";

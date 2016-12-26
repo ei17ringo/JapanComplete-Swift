@@ -10,6 +10,16 @@
 		1989B6261E10E356007E87B2 /* Font_Awesome_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B6251E10E356007E87B2 /* Font_Awesome_Swift.framework */; };
 		1989B6281E10E455007E87B2 /* customTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989B6271E10E455007E87B2 /* customTabBarController.swift */; };
 		1989B62A1E10E9D5007E87B2 /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989B6291E10E9D5007E87B2 /* settingViewController.swift */; };
+		1989B62C1E115677007E87B2 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B62B1E115677007E87B2 /* GoogleMobileAds.framework */; };
+		1989B62E1E115699007E87B2 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B62D1E115699007E87B2 /* AdSupport.framework */; };
+		1989B6301E1156A3007E87B2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B62F1E1156A3007E87B2 /* AudioToolbox.framework */; };
+		1989B6321E1156B1007E87B2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B6311E1156B1007E87B2 /* AVFoundation.framework */; };
+		1989B6341E1156C0007E87B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B6331E1156C0007E87B2 /* CoreGraphics.framework */; };
+		1989B6361E1156D1007E87B2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B6351E1156D1007E87B2 /* CoreMedia.framework */; };
+		1989B6381E1156DF007E87B2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B6371E1156DF007E87B2 /* CoreTelephony.framework */; };
+		1989B63A1E1156F0007E87B2 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B6391E1156F0007E87B2 /* EventKit.framework */; };
+		1989B63C1E1156FF007E87B2 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B63B1E1156FF007E87B2 /* EventKitUI.framework */; };
+		1989B63E1E115712007E87B2 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B63D1E115712007E87B2 /* Messages.framework */; };
 		19B01B2E1E0FCF7300AE46F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B01B2D1E0FCF7300AE46F8 /* AppDelegate.swift */; };
 		19B01B301E0FCF7300AE46F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B01B2F1E0FCF7300AE46F8 /* ViewController.swift */; };
 		19B01B331E0FCF7300AE46F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B01B311E0FCF7300AE46F8 /* Main.storyboard */; };
@@ -41,6 +51,11 @@
 		19B01BBB1E0FD0C100AE46F8 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B01BA41E0FD0C000AE46F8 /* share@2x.png */; };
 		19B01BBC1E0FD0C100AE46F8 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B01BA51E0FD0C000AE46F8 /* test.png */; };
 		19B01BBE1E10DF0B00AE46F8 /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B01BBD1E10DF0B00AE46F8 /* historyViewController.swift */; };
+		19FB32951E11573900AD8404 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FB32941E11573900AD8404 /* StoreKit.framework */; };
+		19FB32971E11574C00AD8404 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FB32961E11574C00AD8404 /* SystemConfiguration.framework */; };
+		19FB32991E116C9800AD8404 /* ColorDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FB32981E116C9800AD8404 /* ColorDef.swift */; };
+		19FB329B1E117A6F00AD8404 /* Areas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19FB329A1E117A6F00AD8404 /* Areas.plist */; };
+		19FB329E1E1185E100AD8404 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19FB32A01E1185E100AD8404 /* Localizable.strings */; };
 		44ECBCD7F3FD161B97893602 /* Pods_JapanCompleteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726870F010954BBEECAC18E1 /* Pods_JapanCompleteTests.framework */; };
 		49ED31ABA7D00E39D12F142C /* Pods_JapanCompleteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BCECFAC7369ABF075C4669 /* Pods_JapanCompleteUITests.framework */; };
 		6A504AE896CA4BD30E00A07D /* Pods_JapanComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9DF283AB5C7F0C1CD29A35 /* Pods_JapanComplete.framework */; };
@@ -68,6 +83,16 @@
 		1989B6251E10E356007E87B2 /* Font_Awesome_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Font_Awesome_Swift.framework; path = "../../Library/Developer/Xcode/DerivedData/JapanComplete-awqdcknynpmyeufsrmwoofmludvr/Build/Products/Debug-iphonesimulator/Font-Awesome-Swift/Font_Awesome_Swift.framework"; sourceTree = "<group>"; };
 		1989B6271E10E455007E87B2 /* customTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customTabBarController.swift; sourceTree = "<group>"; };
 		1989B6291E10E9D5007E87B2 /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
+		1989B62B1E115677007E87B2 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		1989B62D1E115699007E87B2 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		1989B62F1E1156A3007E87B2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1989B6311E1156B1007E87B2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1989B6331E1156C0007E87B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1989B6351E1156D1007E87B2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		1989B6371E1156DF007E87B2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		1989B6391E1156F0007E87B2 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		1989B63B1E1156FF007E87B2 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		1989B63D1E115712007E87B2 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		19B01B2A1E0FCF7200AE46F8 /* JapanComplete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapanComplete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B01B2D1E0FCF7300AE46F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19B01B2F1E0FCF7300AE46F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +130,12 @@
 		19B01BA41E0FD0C000AE46F8 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
 		19B01BA51E0FD0C000AE46F8 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		19B01BBD1E10DF0B00AE46F8 /* historyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
+		19FB32941E11573900AD8404 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		19FB32961E11574C00AD8404 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		19FB32981E116C9800AD8404 /* ColorDef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDef.swift; sourceTree = "<group>"; };
+		19FB329A1E117A6F00AD8404 /* Areas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Areas.plist; sourceTree = "<group>"; };
+		19FB329F1E1185E100AD8404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19FB32A41E11870200AD8404 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		726870F010954BBEECAC18E1 /* Pods_JapanCompleteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JapanCompleteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7386EC193119AFDE5A59F087 /* Pods-JapanComplete.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapanComplete.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JapanComplete/Pods-JapanComplete.debug.xcconfig"; sourceTree = "<group>"; };
 		7E5E02AA00143D60A144F68A /* Pods-JapanComplete.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapanComplete.release.xcconfig"; path = "Pods/Target Support Files/Pods-JapanComplete/Pods-JapanComplete.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +151,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19FB32971E11574C00AD8404 /* SystemConfiguration.framework in Frameworks */,
+				19FB32951E11573900AD8404 /* StoreKit.framework in Frameworks */,
+				1989B63E1E115712007E87B2 /* Messages.framework in Frameworks */,
+				1989B63C1E1156FF007E87B2 /* EventKitUI.framework in Frameworks */,
+				1989B63A1E1156F0007E87B2 /* EventKit.framework in Frameworks */,
+				1989B6381E1156DF007E87B2 /* CoreTelephony.framework in Frameworks */,
+				1989B6361E1156D1007E87B2 /* CoreMedia.framework in Frameworks */,
+				1989B6341E1156C0007E87B2 /* CoreGraphics.framework in Frameworks */,
+				1989B6321E1156B1007E87B2 /* AVFoundation.framework in Frameworks */,
+				1989B6301E1156A3007E87B2 /* AudioToolbox.framework in Frameworks */,
+				1989B62E1E115699007E87B2 /* AdSupport.framework in Frameworks */,
+				1989B62C1E115677007E87B2 /* GoogleMobileAds.framework in Frameworks */,
 				1989B6261E10E356007E87B2 /* Font_Awesome_Swift.framework in Frameworks */,
 				6A504AE896CA4BD30E00A07D /* Pods_JapanComplete.framework in Frameworks */,
 			);
@@ -147,9 +190,12 @@
 		19B01B211E0FCF7200AE46F8 = {
 			isa = PBXGroup;
 			children = (
+				1989B62B1E115677007E87B2 /* GoogleMobileAds.framework */,
 				19B01B2C1E0FCF7200AE46F8 /* JapanComplete */,
 				19B01B8C1E0FD0C000AE46F8 /* html */,
 				19B01B901E0FD0C000AE46F8 /* icon */,
+				19FB329A1E117A6F00AD8404 /* Areas.plist */,
+				19FB32A01E1185E100AD8404 /* Localizable.strings */,
 				19B01B411E0FCF7300AE46F8 /* JapanCompleteTests */,
 				19B01B4C1E0FCF7300AE46F8 /* JapanCompleteUITests */,
 				19B01B2B1E0FCF7200AE46F8 /* Products */,
@@ -180,6 +226,7 @@
 				19B01BBD1E10DF0B00AE46F8 /* historyViewController.swift */,
 				1989B6271E10E455007E87B2 /* customTabBarController.swift */,
 				1989B6291E10E9D5007E87B2 /* settingViewController.swift */,
+				19FB32981E116C9800AD8404 /* ColorDef.swift */,
 			);
 			path = JapanComplete;
 			sourceTree = "<group>";
@@ -252,6 +299,17 @@
 		9EF0C62F9DF0E8E9CE692822 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19FB32961E11574C00AD8404 /* SystemConfiguration.framework */,
+				19FB32941E11573900AD8404 /* StoreKit.framework */,
+				1989B63D1E115712007E87B2 /* Messages.framework */,
+				1989B63B1E1156FF007E87B2 /* EventKitUI.framework */,
+				1989B6391E1156F0007E87B2 /* EventKit.framework */,
+				1989B6371E1156DF007E87B2 /* CoreTelephony.framework */,
+				1989B6351E1156D1007E87B2 /* CoreMedia.framework */,
+				1989B6331E1156C0007E87B2 /* CoreGraphics.framework */,
+				1989B6311E1156B1007E87B2 /* AVFoundation.framework */,
+				1989B62F1E1156A3007E87B2 /* AudioToolbox.framework */,
+				1989B62D1E115699007E87B2 /* AdSupport.framework */,
 				1989B6251E10E356007E87B2 /* Font_Awesome_Swift.framework */,
 				FD9DF283AB5C7F0C1CD29A35 /* Pods_JapanComplete.framework */,
 				726870F010954BBEECAC18E1 /* Pods_JapanCompleteTests.framework */,
@@ -374,6 +432,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 19B01B211E0FCF7200AE46F8;
 			productRefGroup = 19B01B2B1E0FCF7200AE46F8 /* Products */;
@@ -401,6 +460,7 @@
 				19B01BA61E0FD0C000AE46F8 /* event.js in Resources */,
 				19B01BB71E0FD0C100AE46F8 /* LaunchImage640x960.png in Resources */,
 				19B01BB41E0FD0C100AE46F8 /* icon40@2x.png in Resources */,
+				19FB329B1E117A6F00AD8404 /* Areas.plist in Resources */,
 				19B01BB11E0FD0C000AE46F8 /* Icon-Small@2x.png in Resources */,
 				19B01BAF1E0FD0C000AE46F8 /* Icon-76@2x.png in Resources */,
 				19B01BBB1E0FD0C100AE46F8 /* share@2x.png in Resources */,
@@ -408,6 +468,7 @@
 				19B01B351E0FCF7300AE46F8 /* Assets.xcassets in Resources */,
 				19B01BAE1E0FD0C000AE46F8 /* Icon-76.png in Resources */,
 				19B01BAB1E0FD0C000AE46F8 /* Icon-40@3x.png in Resources */,
+				19FB329E1E1185E100AD8404 /* Localizable.strings in Resources */,
 				19B01BB01E0FD0C000AE46F8 /* Icon-Small.png in Resources */,
 				19B01BB31E0FD0C000AE46F8 /* icon29@2x.png in Resources */,
 				19B01BB81E0FD0C100AE46F8 /* manual@2x.png in Resources */,
@@ -583,6 +644,7 @@
 				19B01B301E0FCF7300AE46F8 /* ViewController.swift in Sources */,
 				1989B6281E10E455007E87B2 /* customTabBarController.swift in Sources */,
 				1989B62A1E10E9D5007E87B2 /* settingViewController.swift in Sources */,
+				19FB32991E116C9800AD8404 /* ColorDef.swift in Sources */,
 				19B01B2E1E0FCF7300AE46F8 /* AppDelegate.swift in Sources */,
 				19B01BBE1E10DF0B00AE46F8 /* historyViewController.swift in Sources */,
 			);
@@ -636,6 +698,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		19FB32A01E1185E100AD8404 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19FB329F1E1185E100AD8404 /* Base */,
+				19FB32A41E11870200AD8404 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -643,6 +714,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -693,6 +765,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -738,6 +811,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NF6KLZDSZ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = JapanComplete/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erikoichinohe.JapanComplete;
@@ -752,6 +829,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NF6KLZDSZ2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = JapanComplete/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erikoichinohe.JapanComplete;

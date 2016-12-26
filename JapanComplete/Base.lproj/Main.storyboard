@@ -31,13 +31,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyG-IT-mpJ">
-                                <rect key="frame" x="16" y="617" width="343" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="QVD-VF-wWZ"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -46,11 +39,8 @@
                             <constraint firstAttribute="trailing" secondItem="lTS-3o-mH4" secondAttribute="trailing" constant="2" id="NQE-Po-USm"/>
                             <constraint firstItem="lTS-3o-mH4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dG2-I6-bVf"/>
                             <constraint firstItem="lTS-3o-mH4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="2" id="dMO-kg-IGf"/>
-                            <constraint firstAttribute="bottom" secondItem="oyG-IT-mpJ" secondAttribute="bottom" id="mRc-rO-Vst"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lTS-3o-mH4" secondAttribute="bottom" constant="154" id="tNN-bY-peQ"/>
-                            <constraint firstItem="oyG-IT-mpJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="tbl-fq-2wc"/>
                             <constraint firstAttribute="trailing" secondItem="1JM-x3-xip" secondAttribute="trailing" constant="16" id="zBi-si-n72"/>
-                            <constraint firstAttribute="trailing" secondItem="oyG-IT-mpJ" secondAttribute="trailing" constant="16" id="ziY-2E-Ro4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your Japan Map" id="YkV-RH-rFN">
@@ -144,7 +134,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c3J-FP-Q7e" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" id="TAR-eC-RLY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Nu-1M-D0p">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6Nu-1M-D0p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

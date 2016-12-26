@@ -17,7 +17,9 @@ class customTabBarController: UITabBarController {
         super.init(coder: aDecoder)
     
         self.tabBar.frame = CGRect(x:0, y:self.view.frame.size.height - 100,width: self.view.frame.size.width,height: 50);
-        self.tabBar.backgroundColor = UIColor.init(colorLiteralRed: 1, green: 0, blue: 0, alpha: 1)
+        self.tabBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
+        self.tabBar.tintColor = UIColor.white
+        
         
         self.tabBar.items?[0].setFAIcon(icon: FAType.FAMapMarker)
 
