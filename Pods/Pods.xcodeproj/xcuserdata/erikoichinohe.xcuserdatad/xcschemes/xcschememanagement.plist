@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Font-Awesome-Swift-Font-Awesome-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Font-Awesome-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-JapanComplete.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-JapanCompleteTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-JapanCompleteUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1FCE5780E259A704E8AE18A3BE38279B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>41494FA0489EB1B055ABEEDDFC05B27E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>42BA42697BAE175D64C529CCB66989F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9735AA72928D41DB06EA697E23930C72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA453546C51032641C49CACBC22725EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

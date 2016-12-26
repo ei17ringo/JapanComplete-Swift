@@ -1,0 +1,977 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05F33B4B13BC0DCE6EE7518267C0F46B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282E317D90744761F406E685BC46589A /* CoreText.framework */; };
+		203672238DBCE497E982B84D501128B1 /* Pods-JapanCompleteTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1817E916919998139EBA3808D4AE1051 /* Pods-JapanCompleteTests-dummy.m */; };
+		207D725533423D55A24FA53494476090 /* FAIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B73F4F412383A6B49EB0DF5B7FB2E7 /* FAIcon.swift */; };
+		2BF115CB201E1A96E4ECF16D9B386017 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C23E16390F6F5920E271EBFB6A30A8 /* UIKit.framework */; };
+		4169E274A2F55F6BF097EB4340F9E49E /* Pods-JapanCompleteUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC15BD1570801B1BA6CC85C2BD7A3094 /* Pods-JapanCompleteUITests-dummy.m */; };
+		4BC3DE26D03DB0897C652B625D67A2FA /* Pods-JapanCompleteUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A7CB840767823B26B1084B1EF96144E /* Pods-JapanCompleteUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		783DAA6882C21D04CC9A35AA14BFAA17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32431FA5524F12225B1B779AF3E4A6D /* Foundation.framework */; };
+		83FE4B97906B69E8DB05732DDA1D53F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32431FA5524F12225B1B779AF3E4A6D /* Foundation.framework */; };
+		862F6576D6B64D137E1F6E464F9A906E /* Font-Awesome-Swift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4691B31D25BFFBEF6AFECAB00AA29D21 /* Font-Awesome-Swift.bundle */; };
+		94AD925604BA6F2EAFE9BA9810C92959 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32431FA5524F12225B1B779AF3E4A6D /* Foundation.framework */; };
+		A0D6FF34A47ADC7269043CD5FA3C61A1 /* Pods-JapanCompleteTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C189C4DD2EE2CFD248721FFE606B585A /* Pods-JapanCompleteTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4742149453AD46E590B715335CECF22 /* Font-Awesome-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2195F2B0D286598F61B13D48E12C6FB /* Font-Awesome-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC24B7BFE64B154BB0EDB1E294D4D9DC /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBA95072C791B11185074CA43CF481A /* FontAwesome.ttf */; };
+		B5D7BD9EC3B7F37F0F66EEA3F35A0DF4 /* Pods-JapanComplete-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E2CB40C2464BC8473069F18DEBE95A /* Pods-JapanComplete-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE2F633C66D9E35B2A0843C2267DE0FA /* Pods-JapanComplete-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9786C866B0F79017E82A59CED7278FE2 /* Pods-JapanComplete-dummy.m */; };
+		E7E94390A1CF40ED6C3C620B0BE8B0A0 /* Font-Awesome-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D3E9BFCD52127254DD23421C004BB /* Font-Awesome-Swift-dummy.m */; };
+		FDAACB93E1AD41A3D0B342566DFE879B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32431FA5524F12225B1B779AF3E4A6D /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		682BD0987EB17880E3025EFA1CCEBF82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9735AA72928D41DB06EA697E23930C72;
+			remoteInfo = "Font-Awesome-Swift-Font-Awesome-Swift";
+		};
+		BC7201C40BEAE321CCC9B7B58101F54B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA453546C51032641C49CACBC22725EE;
+			remoteInfo = "Font-Awesome-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0DAB69DF4AFC1F511DC16135DE87F185 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114C7C9F5FCF9070EFC1C1C4BE9CF112 /* ResourceBundle-Font-Awesome-Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Font-Awesome-Swift-Info.plist"; sourceTree = "<group>"; };
+		11815F8D8A0367C04718ABFB6052E04C /* Pods-JapanComplete.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JapanComplete.debug.xcconfig"; sourceTree = "<group>"; };
+		13CA2680BBCD066974ADAFF8891DC66D /* Pods-JapanCompleteTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JapanCompleteTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		13EFE4A3C0E4D904435E42A921C8224C /* Pods-JapanCompleteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JapanCompleteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1817E916919998139EBA3808D4AE1051 /* Pods-JapanCompleteTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JapanCompleteTests-dummy.m"; sourceTree = "<group>"; };
+		1E9EBA2DEC618F9B7430564652CC5101 /* Font_Awesome_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Font_Awesome_Swift.framework; path = "Font-Awesome-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		238D0EC723421C5AAAB75AE91DEED008 /* Pods-JapanComplete-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JapanComplete-frameworks.sh"; sourceTree = "<group>"; };
+		27C23E16390F6F5920E271EBFB6A30A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		282E317D90744761F406E685BC46589A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		2AC648291D9EDAFA3B22A772B1C9F255 /* Pods-JapanComplete-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JapanComplete-resources.sh"; sourceTree = "<group>"; };
+		3406BDF77746EC24568DFCD0748272E0 /* Pods-JapanCompleteUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JapanCompleteUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3712350A6FEE43D554C5FA3764F5B0FB /* Pods-JapanCompleteUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JapanCompleteUITests-frameworks.sh"; sourceTree = "<group>"; };
+		3A6CDF7CFABBCF59F55378F1FEB94906 /* Font-Awesome-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Font-Awesome-Swift.xcconfig"; sourceTree = "<group>"; };
+		4691B31D25BFFBEF6AFECAB00AA29D21 /* Font-Awesome-Swift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Font-Awesome-Swift.bundle"; path = "Font-Awesome-Swift.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C0D3E9BFCD52127254DD23421C004BB /* Font-Awesome-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Font-Awesome-Swift-dummy.m"; sourceTree = "<group>"; };
+		4C7C467D3BAD7EA21D4E8C98FF3A3EA3 /* Pods-JapanCompleteUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JapanCompleteUITests-resources.sh"; sourceTree = "<group>"; };
+		507E3C6CE40CBD6D6F031B4310A9C9AD /* Pods-JapanCompleteTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JapanCompleteTests-resources.sh"; sourceTree = "<group>"; };
+		5BBA95072C791B11185074CA43CF481A /* FontAwesome.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome.ttf; path = Source/FontAwesome.ttf; sourceTree = "<group>"; };
+		63B73F4F412383A6B49EB0DF5B7FB2E7 /* FAIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FAIcon.swift; path = Source/FAIcon.swift; sourceTree = "<group>"; };
+		6A7CB840767823B26B1084B1EF96144E /* Pods-JapanCompleteUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JapanCompleteUITests-umbrella.h"; sourceTree = "<group>"; };
+		6B8D75A3E4933E7E9C67D2D77FFA9C31 /* Pods-JapanComplete-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JapanComplete-acknowledgements.plist"; sourceTree = "<group>"; };
+		728397C5D303B01CBA97D61F23EF74EC /* Pods-JapanCompleteUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JapanCompleteUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		75A8F9BC5B9D604803D64445F759CA3E /* Pods-JapanCompleteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JapanCompleteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		78069A2ED469CCC0E85BA9603F578833 /* Pods-JapanCompleteUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JapanCompleteUITests.modulemap"; sourceTree = "<group>"; };
+		7FE8C41E09D90B6F7D18F26CC158DB39 /* Pods-JapanCompleteTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JapanCompleteTests.modulemap"; sourceTree = "<group>"; };
+		8A49E397D86B4643525158A60885884C /* Font-Awesome-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Font-Awesome-Swift.modulemap"; sourceTree = "<group>"; };
+		8CA950A4599B646C1CA7B8757208330A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94E2CB40C2464BC8473069F18DEBE95A /* Pods-JapanComplete-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JapanComplete-umbrella.h"; sourceTree = "<group>"; };
+		9786C866B0F79017E82A59CED7278FE2 /* Pods-JapanComplete-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JapanComplete-dummy.m"; sourceTree = "<group>"; };
+		9B473119FE90D84687B7906549838605 /* Pods-JapanComplete.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JapanComplete.release.xcconfig"; sourceTree = "<group>"; };
+		9CE9201DEBB6760348E7BCE09DF52E19 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EF0AE51FA26E0069C841BC9C7AE7AC1 /* Pods-JapanComplete-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JapanComplete-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A2195F2B0D286598F61B13D48E12C6FB /* Font-Awesome-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Font-Awesome-Swift-umbrella.h"; sourceTree = "<group>"; };
+		B32431FA5524F12225B1B779AF3E4A6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BE4E9DEDCAE741EE7B84BF413F28DBD8 /* Pods_JapanComplete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JapanComplete.framework; path = "Pods-JapanComplete.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C189C4DD2EE2CFD248721FFE606B585A /* Pods-JapanCompleteTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JapanCompleteTests-umbrella.h"; sourceTree = "<group>"; };
+		CC15BD1570801B1BA6CC85C2BD7A3094 /* Pods-JapanCompleteUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JapanCompleteUITests-dummy.m"; sourceTree = "<group>"; };
+		CCD98D9CF9F490A74F47BF1634701F4A /* Pods-JapanCompleteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JapanCompleteTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE481A17890FF89D065FD0D6FB1086C9 /* Pods-JapanComplete.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JapanComplete.modulemap"; sourceTree = "<group>"; };
+		CE9420C87F4B19972D7FFA168E6F1FC2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFD7F4B13A7B4A98BAD9DD2B216CC816 /* Pods-JapanCompleteTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JapanCompleteTests-frameworks.sh"; sourceTree = "<group>"; };
+		E0196283BE01CA1E288CF3679EE089F4 /* Font-Awesome-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Font-Awesome-Swift-prefix.pch"; sourceTree = "<group>"; };
+		E59119400163669A3C0FE2E8022F1164 /* Pods_JapanCompleteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JapanCompleteTests.framework; path = "Pods-JapanCompleteTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EADA93109D6FE7D933372C2F33B1E107 /* Pods_JapanCompleteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JapanCompleteUITests.framework; path = "Pods-JapanCompleteUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4F77D439161CFD940FA48DF09925CF /* Pods-JapanCompleteTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JapanCompleteTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F1700AACDC9A4C1FD77B3C963AAEE79E /* Pods-JapanCompleteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JapanCompleteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2873547DCFC3CAB37C66BCF0A909F826 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7851B0DB3C2B22D0C0ED3A33CF2B4128 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83FE4B97906B69E8DB05732DDA1D53F0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0D82BD31B59E77B7B4E21CC24381CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDAACB93E1AD41A3D0B342566DFE879B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96D555D1178E470E413C01004DE33279 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				783DAA6882C21D04CC9A35AA14BFAA17 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6291121CF999A2EE75BE05F8F951899 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05F33B4B13BC0DCE6EE7518267C0F46B /* CoreText.framework in Frameworks */,
+				94AD925604BA6F2EAFE9BA9810C92959 /* Foundation.framework in Frameworks */,
+				2BF115CB201E1A96E4ECF16D9B386017 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3587588751A8A6B53D9C05B2DC18428D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16B02643080C770A3429ACBD71836C18 /* Pods-JapanCompleteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8CA950A4599B646C1CA7B8757208330A /* Info.plist */,
+				78069A2ED469CCC0E85BA9603F578833 /* Pods-JapanCompleteUITests.modulemap */,
+				3406BDF77746EC24568DFCD0748272E0 /* Pods-JapanCompleteUITests-acknowledgements.markdown */,
+				728397C5D303B01CBA97D61F23EF74EC /* Pods-JapanCompleteUITests-acknowledgements.plist */,
+				CC15BD1570801B1BA6CC85C2BD7A3094 /* Pods-JapanCompleteUITests-dummy.m */,
+				3712350A6FEE43D554C5FA3764F5B0FB /* Pods-JapanCompleteUITests-frameworks.sh */,
+				4C7C467D3BAD7EA21D4E8C98FF3A3EA3 /* Pods-JapanCompleteUITests-resources.sh */,
+				6A7CB840767823B26B1084B1EF96144E /* Pods-JapanCompleteUITests-umbrella.h */,
+				F1700AACDC9A4C1FD77B3C963AAEE79E /* Pods-JapanCompleteUITests.debug.xcconfig */,
+				75A8F9BC5B9D604803D64445F759CA3E /* Pods-JapanCompleteUITests.release.xcconfig */,
+			);
+			name = "Pods-JapanCompleteUITests";
+			path = "Target Support Files/Pods-JapanCompleteUITests";
+			sourceTree = "<group>";
+		};
+		18A6C8D740A57500642B3B8861AA58D9 /* Pods-JapanComplete */ = {
+			isa = PBXGroup;
+			children = (
+				9CE9201DEBB6760348E7BCE09DF52E19 /* Info.plist */,
+				CE481A17890FF89D065FD0D6FB1086C9 /* Pods-JapanComplete.modulemap */,
+				9EF0AE51FA26E0069C841BC9C7AE7AC1 /* Pods-JapanComplete-acknowledgements.markdown */,
+				6B8D75A3E4933E7E9C67D2D77FFA9C31 /* Pods-JapanComplete-acknowledgements.plist */,
+				9786C866B0F79017E82A59CED7278FE2 /* Pods-JapanComplete-dummy.m */,
+				238D0EC723421C5AAAB75AE91DEED008 /* Pods-JapanComplete-frameworks.sh */,
+				2AC648291D9EDAFA3B22A772B1C9F255 /* Pods-JapanComplete-resources.sh */,
+				94E2CB40C2464BC8473069F18DEBE95A /* Pods-JapanComplete-umbrella.h */,
+				11815F8D8A0367C04718ABFB6052E04C /* Pods-JapanComplete.debug.xcconfig */,
+				9B473119FE90D84687B7906549838605 /* Pods-JapanComplete.release.xcconfig */,
+			);
+			name = "Pods-JapanComplete";
+			path = "Target Support Files/Pods-JapanComplete";
+			sourceTree = "<group>";
+		};
+		2DA28FBF01D6A10C5D23157496EFDF31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4691B31D25BFFBEF6AFECAB00AA29D21 /* Font-Awesome-Swift.bundle */,
+				1E9EBA2DEC618F9B7430564652CC5101 /* Font_Awesome_Swift.framework */,
+				BE4E9DEDCAE741EE7B84BF413F28DBD8 /* Pods_JapanComplete.framework */,
+				E59119400163669A3C0FE2E8022F1164 /* Pods_JapanCompleteTests.framework */,
+				EADA93109D6FE7D933372C2F33B1E107 /* Pods_JapanCompleteUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3587588751A8A6B53D9C05B2DC18428D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				282E317D90744761F406E685BC46589A /* CoreText.framework */,
+				B32431FA5524F12225B1B779AF3E4A6D /* Foundation.framework */,
+				27C23E16390F6F5920E271EBFB6A30A8 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		39B63D6DBA32489B37DBEB6BEF61F8FF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A49E397D86B4643525158A60885884C /* Font-Awesome-Swift.modulemap */,
+				3A6CDF7CFABBCF59F55378F1FEB94906 /* Font-Awesome-Swift.xcconfig */,
+				4C0D3E9BFCD52127254DD23421C004BB /* Font-Awesome-Swift-dummy.m */,
+				E0196283BE01CA1E288CF3679EE089F4 /* Font-Awesome-Swift-prefix.pch */,
+				A2195F2B0D286598F61B13D48E12C6FB /* Font-Awesome-Swift-umbrella.h */,
+				0DAB69DF4AFC1F511DC16135DE87F185 /* Info.plist */,
+				114C7C9F5FCF9070EFC1C1C4BE9CF112 /* ResourceBundle-Font-Awesome-Swift-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Font-Awesome-Swift";
+			sourceTree = "<group>";
+		};
+		67D3810A041E83D42F3ADE48FB0EB5BB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				18A6C8D740A57500642B3B8861AA58D9 /* Pods-JapanComplete */,
+				8C180F1ECA8DF45ECC27BE02D8D5D655 /* Pods-JapanCompleteTests */,
+				16B02643080C770A3429ACBD71836C18 /* Pods-JapanCompleteUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		68182AB9BD32CC0CD57ED766F4AC6818 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BBA95072C791B11185074CA43CF481A /* FontAwesome.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				D7033BE5BFFDBD9D8C4DFAAAF9E1E11D /* Pods */,
+				2DA28FBF01D6A10C5D23157496EFDF31 /* Products */,
+				67D3810A041E83D42F3ADE48FB0EB5BB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8C180F1ECA8DF45ECC27BE02D8D5D655 /* Pods-JapanCompleteTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE9420C87F4B19972D7FFA168E6F1FC2 /* Info.plist */,
+				7FE8C41E09D90B6F7D18F26CC158DB39 /* Pods-JapanCompleteTests.modulemap */,
+				EB4F77D439161CFD940FA48DF09925CF /* Pods-JapanCompleteTests-acknowledgements.markdown */,
+				13CA2680BBCD066974ADAFF8891DC66D /* Pods-JapanCompleteTests-acknowledgements.plist */,
+				1817E916919998139EBA3808D4AE1051 /* Pods-JapanCompleteTests-dummy.m */,
+				CFD7F4B13A7B4A98BAD9DD2B216CC816 /* Pods-JapanCompleteTests-frameworks.sh */,
+				507E3C6CE40CBD6D6F031B4310A9C9AD /* Pods-JapanCompleteTests-resources.sh */,
+				C189C4DD2EE2CFD248721FFE606B585A /* Pods-JapanCompleteTests-umbrella.h */,
+				13EFE4A3C0E4D904435E42A921C8224C /* Pods-JapanCompleteTests.debug.xcconfig */,
+				CCD98D9CF9F490A74F47BF1634701F4A /* Pods-JapanCompleteTests.release.xcconfig */,
+			);
+			name = "Pods-JapanCompleteTests";
+			path = "Target Support Files/Pods-JapanCompleteTests";
+			sourceTree = "<group>";
+		};
+		D7033BE5BFFDBD9D8C4DFAAAF9E1E11D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6A5E756F58BF9ECAD42A9D0585532F1 /* Font-Awesome-Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E6A5E756F58BF9ECAD42A9D0585532F1 /* Font-Awesome-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				63B73F4F412383A6B49EB0DF5B7FB2E7 /* FAIcon.swift */,
+				68182AB9BD32CC0CD57ED766F4AC6818 /* Resources */,
+				39B63D6DBA32489B37DBEB6BEF61F8FF /* Support Files */,
+			);
+			name = "Font-Awesome-Swift";
+			path = "Font-Awesome-Swift";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		41D24FACCA237D6AF3AD7EA27239CACD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0D6FF34A47ADC7269043CD5FA3C61A1 /* Pods-JapanCompleteTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A6B934D4117EADD2E480C36D3737FF3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BC3DE26D03DB0897C652B625D67A2FA /* Pods-JapanCompleteUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2873D7F48D5059CA50A79ADE29E0859 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4742149453AD46E590B715335CECF22 /* Font-Awesome-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E237CD3DE566D17E004BC1CD4B4FCAB4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D7BD9EC3B7F37F0F66EEA3F35A0DF4 /* Pods-JapanComplete-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1FCE5780E259A704E8AE18A3BE38279B /* Pods-JapanCompleteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F159392CFC5A244BB8E3D0AD1A1041BA /* Build configuration list for PBXNativeTarget "Pods-JapanCompleteUITests" */;
+			buildPhases = (
+				A1ED386205263E2A8C0F32F54A6ACCA1 /* Sources */,
+				7851B0DB3C2B22D0C0ED3A33CF2B4128 /* Frameworks */,
+				8A6B934D4117EADD2E480C36D3737FF3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JapanCompleteUITests";
+			productName = "Pods-JapanCompleteUITests";
+			productReference = EADA93109D6FE7D933372C2F33B1E107 /* Pods_JapanCompleteUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		41494FA0489EB1B055ABEEDDFC05B27E /* Pods-JapanComplete */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4032E74037D6C185D3DD1033DACBC1C0 /* Build configuration list for PBXNativeTarget "Pods-JapanComplete" */;
+			buildPhases = (
+				413A5C21FE0778D0135CE864307B1FC5 /* Sources */,
+				96D555D1178E470E413C01004DE33279 /* Frameworks */,
+				E237CD3DE566D17E004BC1CD4B4FCAB4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10E895513B561558671CB801F4404E9A /* PBXTargetDependency */,
+			);
+			name = "Pods-JapanComplete";
+			productName = "Pods-JapanComplete";
+			productReference = BE4E9DEDCAE741EE7B84BF413F28DBD8 /* Pods_JapanComplete.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		42BA42697BAE175D64C529CCB66989F0 /* Pods-JapanCompleteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F078E41DC404104BBFCFDD7162E3B09F /* Build configuration list for PBXNativeTarget "Pods-JapanCompleteTests" */;
+			buildPhases = (
+				D37F778AF06F30CCC72E809E94E63309 /* Sources */,
+				8F0D82BD31B59E77B7B4E21CC24381CD /* Frameworks */,
+				41D24FACCA237D6AF3AD7EA27239CACD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JapanCompleteTests";
+			productName = "Pods-JapanCompleteTests";
+			productReference = E59119400163669A3C0FE2E8022F1164 /* Pods_JapanCompleteTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9735AA72928D41DB06EA697E23930C72 /* Font-Awesome-Swift-Font-Awesome-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3196888FC4BA2CC8F14DE782D510C49D /* Build configuration list for PBXNativeTarget "Font-Awesome-Swift-Font-Awesome-Swift" */;
+			buildPhases = (
+				25A6BBD7F5E29C3374417679ED84EAD4 /* Sources */,
+				2873547DCFC3CAB37C66BCF0A909F826 /* Frameworks */,
+				E7CEF4EBC3888DA3128E6CEB79BE5BBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Font-Awesome-Swift-Font-Awesome-Swift";
+			productName = "Font-Awesome-Swift-Font-Awesome-Swift";
+			productReference = 4691B31D25BFFBEF6AFECAB00AA29D21 /* Font-Awesome-Swift.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		BA453546C51032641C49CACBC22725EE /* Font-Awesome-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C44699AC6ECDFB00A9014C5FB5C7E1E8 /* Build configuration list for PBXNativeTarget "Font-Awesome-Swift" */;
+			buildPhases = (
+				D88D19D75A2C129F5E1811B75B9D7702 /* Sources */,
+				F6291121CF999A2EE75BE05F8F951899 /* Frameworks */,
+				9081D6494BFC478079119EBA113E216F /* Resources */,
+				C2873D7F48D5059CA50A79ADE29E0859 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84F4642A21AF7C7C12FE5C7959D975B0 /* PBXTargetDependency */,
+			);
+			name = "Font-Awesome-Swift";
+			productName = "Font-Awesome-Swift";
+			productReference = 1E9EBA2DEC618F9B7430564652CC5101 /* Font_Awesome_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2DA28FBF01D6A10C5D23157496EFDF31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA453546C51032641C49CACBC22725EE /* Font-Awesome-Swift */,
+				9735AA72928D41DB06EA697E23930C72 /* Font-Awesome-Swift-Font-Awesome-Swift */,
+				41494FA0489EB1B055ABEEDDFC05B27E /* Pods-JapanComplete */,
+				42BA42697BAE175D64C529CCB66989F0 /* Pods-JapanCompleteTests */,
+				1FCE5780E259A704E8AE18A3BE38279B /* Pods-JapanCompleteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9081D6494BFC478079119EBA113E216F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				862F6576D6B64D137E1F6E464F9A906E /* Font-Awesome-Swift.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7CEF4EBC3888DA3128E6CEB79BE5BBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC24B7BFE64B154BB0EDB1E294D4D9DC /* FontAwesome.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25A6BBD7F5E29C3374417679ED84EAD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		413A5C21FE0778D0135CE864307B1FC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2F633C66D9E35B2A0843C2267DE0FA /* Pods-JapanComplete-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1ED386205263E2A8C0F32F54A6ACCA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4169E274A2F55F6BF097EB4340F9E49E /* Pods-JapanCompleteUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D37F778AF06F30CCC72E809E94E63309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203672238DBCE497E982B84D501128B1 /* Pods-JapanCompleteTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88D19D75A2C129F5E1811B75B9D7702 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207D725533423D55A24FA53494476090 /* FAIcon.swift in Sources */,
+				E7E94390A1CF40ED6C3C620B0BE8B0A0 /* Font-Awesome-Swift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10E895513B561558671CB801F4404E9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Font-Awesome-Swift";
+			target = BA453546C51032641C49CACBC22725EE /* Font-Awesome-Swift */;
+			targetProxy = BC7201C40BEAE321CCC9B7B58101F54B /* PBXContainerItemProxy */;
+		};
+		84F4642A21AF7C7C12FE5C7959D975B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Font-Awesome-Swift-Font-Awesome-Swift";
+			target = 9735AA72928D41DB06EA697E23930C72 /* Font-Awesome-Swift-Font-Awesome-Swift */;
+			targetProxy = 682BD0987EB17880E3025EFA1CCEBF82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		104C24CAB27E0187E1F53AABDDB3901E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCD98D9CF9F490A74F47BF1634701F4A /* Pods-JapanCompleteTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JapanCompleteTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JapanCompleteTests/Pods-JapanCompleteTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JapanCompleteTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2889EE1322DEB9477280B58F793EA9D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13EFE4A3C0E4D904435E42A921C8224C /* Pods-JapanCompleteTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JapanCompleteTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JapanCompleteTests/Pods-JapanCompleteTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JapanCompleteTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		823C79E9F2D8240FCD5EC9CB05D41962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11815F8D8A0367C04718ABFB6052E04C /* Pods-JapanComplete.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JapanComplete/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JapanComplete/Pods-JapanComplete.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JapanComplete;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		861BA020D260A7DBF97E7B91561B57A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75A8F9BC5B9D604803D64445F759CA3E /* Pods-JapanCompleteUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JapanCompleteUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JapanCompleteUITests/Pods-JapanCompleteUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JapanCompleteUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8FEBF703E1D0A71A402EEB1A7AB85212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A6CDF7CFABBCF59F55378F1FEB94906 /* Font-Awesome-Swift.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Font-Awesome-Swift";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Font-Awesome-Swift/ResourceBundle-Font-Awesome-Swift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "Font-Awesome-Swift";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		AAE4B714984E1DE3070F5A17B4945C27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A6CDF7CFABBCF59F55378F1FEB94906 /* Font-Awesome-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Font-Awesome-Swift/Font-Awesome-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Font-Awesome-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Font-Awesome-Swift/Font-Awesome-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Font_Awesome_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C33F7AD129F500616188707F25205B4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B473119FE90D84687B7906549838605 /* Pods-JapanComplete.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JapanComplete/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JapanComplete/Pods-JapanComplete.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JapanComplete;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DFB34922815AD825768E75674ED36C21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1700AACDC9A4C1FD77B3C963AAEE79E /* Pods-JapanCompleteUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JapanCompleteUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JapanCompleteUITests/Pods-JapanCompleteUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JapanCompleteUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E8D5556FCC4AC3195E8C139BCA8BE29E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A6CDF7CFABBCF59F55378F1FEB94906 /* Font-Awesome-Swift.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Font-Awesome-Swift";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Font-Awesome-Swift/ResourceBundle-Font-Awesome-Swift-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = "Font-Awesome-Swift";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		EBC842B877A9A93E281CA742403BE7F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A6CDF7CFABBCF59F55378F1FEB94906 /* Font-Awesome-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Font-Awesome-Swift/Font-Awesome-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Font-Awesome-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Font-Awesome-Swift/Font-Awesome-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Font_Awesome_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3196888FC4BA2CC8F14DE782D510C49D /* Build configuration list for PBXNativeTarget "Font-Awesome-Swift-Font-Awesome-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FEBF703E1D0A71A402EEB1A7AB85212 /* Debug */,
+				E8D5556FCC4AC3195E8C139BCA8BE29E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4032E74037D6C185D3DD1033DACBC1C0 /* Build configuration list for PBXNativeTarget "Pods-JapanComplete" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				823C79E9F2D8240FCD5EC9CB05D41962 /* Debug */,
+				C33F7AD129F500616188707F25205B4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C44699AC6ECDFB00A9014C5FB5C7E1E8 /* Build configuration list for PBXNativeTarget "Font-Awesome-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAE4B714984E1DE3070F5A17B4945C27 /* Debug */,
+				EBC842B877A9A93E281CA742403BE7F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F078E41DC404104BBFCFDD7162E3B09F /* Build configuration list for PBXNativeTarget "Pods-JapanCompleteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2889EE1322DEB9477280B58F793EA9D5 /* Debug */,
+				104C24CAB27E0187E1F53AABDDB3901E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F159392CFC5A244BB8E3D0AD1A1041BA /* Build configuration list for PBXNativeTarget "Pods-JapanCompleteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFB34922815AD825768E75674ED36C21 /* Debug */,
+				861BA020D260A7DBF97E7B91561B57A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

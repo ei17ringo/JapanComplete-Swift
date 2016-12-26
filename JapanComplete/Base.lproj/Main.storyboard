@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zqc-ZH-HqB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Your Japan Map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapViewController" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="JapanComplete" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,142 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTS-3o-mH4">
+                                <rect key="frame" x="2" y="64" width="371" height="400"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score:20% 10/47" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JM-x3-xip">
+                                <rect key="frame" x="16" y="484" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyG-IT-mpJ">
+                                <rect key="frame" x="16" y="617" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QVD-VF-wWZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1JM-x3-xip" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="4DU-wM-i0E"/>
+                            <constraint firstItem="1JM-x3-xip" firstAttribute="top" secondItem="lTS-3o-mH4" secondAttribute="bottom" constant="20" id="HxT-f6-rca"/>
+                            <constraint firstAttribute="trailing" secondItem="lTS-3o-mH4" secondAttribute="trailing" constant="2" id="NQE-Po-USm"/>
+                            <constraint firstItem="lTS-3o-mH4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dG2-I6-bVf"/>
+                            <constraint firstItem="lTS-3o-mH4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="2" id="dMO-kg-IGf"/>
+                            <constraint firstAttribute="bottom" secondItem="oyG-IT-mpJ" secondAttribute="bottom" id="mRc-rO-Vst"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lTS-3o-mH4" secondAttribute="bottom" constant="154" id="tNN-bY-peQ"/>
+                            <constraint firstItem="oyG-IT-mpJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="tbl-fq-2wc"/>
+                            <constraint firstAttribute="trailing" secondItem="1JM-x3-xip" secondAttribute="trailing" constant="16" id="zBi-si-n72"/>
+                            <constraint firstAttribute="trailing" secondItem="oyG-IT-mpJ" secondAttribute="trailing" constant="16" id="ziY-2E-Ro4"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Your Japan Map" id="YkV-RH-rFN">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="AzY-s9-E64">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i0C-Q0-9kq">
+                                <rect key="frame" x="16" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="?"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="lu4-A4-byX">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a4w-UR-0V2">
+                                <rect key="frame" x="329" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="share"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="helpButton" destination="i0C-Q0-9kq" id="iRO-Ra-iso"/>
+                        <outlet property="mapWebView" destination="lTS-3o-mH4" id="HzE-my-6M6"/>
+                        <outlet property="shareButton" destination="a4w-UR-0V2" id="qep-T8-6qN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2015.2" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="r7G-Wj-06G">
+            <objects>
+                <viewController id="TBh-Oy-9nd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gsW-dW-EMl"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZsK-mj-Cj2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4KT-6d-ZuD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="Wbs-U0-SVT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cxG-fh-cwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="901"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="qEX-E1-v5a">
+            <objects>
+                <viewController storyboardIdentifier="settingViewController" id="oGW-tL-TZi" customClass="settingViewController" customModule="JapanComplete" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IK8-SL-bdD"/>
+                        <viewControllerLayoutGuide type="bottom" id="l57-CK-QKm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dmr-lz-JyK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setting" id="cPh-Nt-uzw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tmA-eF-bc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="1596"/>
+        </scene>
+        <!--Custom Tab Bar Controller-->
+        <scene sceneID="qu2-Qj-XKb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Zqc-ZH-HqB" customClass="customTabBarController" customModule="JapanComplete" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Nvf-2o-hFd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="c3J-FP-Q7e" kind="relationship" relationship="viewControllers" id="BcG-5Z-Sr8"/>
+                        <segue destination="TBh-Oy-9nd" kind="relationship" relationship="viewControllers" id="QNd-kj-slr"/>
+                        <segue destination="oGW-tL-TZi" kind="relationship" relationship="viewControllers" id="pZy-xH-1rA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFc-Oi-6KN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="UuK-H5-4go">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c3J-FP-Q7e" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" id="TAR-eC-RLY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Nu-1M-D0p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7ih-Uz-u1H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QO8-8N-AUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

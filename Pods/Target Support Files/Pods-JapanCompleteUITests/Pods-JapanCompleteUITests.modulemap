@@ -1,0 +1,6 @@
+framework module Pods_JapanCompleteUITests {
+  umbrella header "Pods-JapanCompleteUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
