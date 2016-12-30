@@ -64,6 +64,7 @@
                     <connections>
                         <outlet property="helpButton" destination="i0C-Q0-9kq" id="iRO-Ra-iso"/>
                         <outlet property="mapWebView" destination="lTS-3o-mH4" id="HzE-my-6M6"/>
+                        <outlet property="percentageText" destination="1JM-x3-xip" id="tvY-CQ-K1E"/>
                         <outlet property="shareButton" destination="a4w-UR-0V2" id="qep-T8-6qN"/>
                     </connections>
                 </viewController>

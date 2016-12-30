@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192A82B21E1219EC00A9C2E1 /* prefecture.json in Resources */ = {isa = PBXBuildFile; fileRef = 192A82B11E1219EC00A9C2E1 /* prefecture.json */; };
 		1989B6261E10E356007E87B2 /* Font_Awesome_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B6251E10E356007E87B2 /* Font_Awesome_Swift.framework */; };
 		1989B6281E10E455007E87B2 /* customTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989B6271E10E455007E87B2 /* customTabBarController.swift */; };
 		1989B62A1E10E9D5007E87B2 /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989B6291E10E9D5007E87B2 /* settingViewController.swift */; };
@@ -54,7 +55,6 @@
 		19FB32951E11573900AD8404 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FB32941E11573900AD8404 /* StoreKit.framework */; };
 		19FB32971E11574C00AD8404 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FB32961E11574C00AD8404 /* SystemConfiguration.framework */; };
 		19FB32991E116C9800AD8404 /* ColorDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FB32981E116C9800AD8404 /* ColorDef.swift */; };
-		19FB329B1E117A6F00AD8404 /* Areas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19FB329A1E117A6F00AD8404 /* Areas.plist */; };
 		19FB329E1E1185E100AD8404 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19FB32A01E1185E100AD8404 /* Localizable.strings */; };
 		44ECBCD7F3FD161B97893602 /* Pods_JapanCompleteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726870F010954BBEECAC18E1 /* Pods_JapanCompleteTests.framework */; };
 		49ED31ABA7D00E39D12F142C /* Pods_JapanCompleteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BCECFAC7369ABF075C4669 /* Pods_JapanCompleteUITests.framework */; };
@@ -80,6 +80,7 @@
 
 /* Begin PBXFileReference section */
 		06BCECFAC7369ABF075C4669 /* Pods_JapanCompleteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JapanCompleteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		192A82B11E1219EC00A9C2E1 /* prefecture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prefecture.json; sourceTree = "<group>"; };
 		1989B6251E10E356007E87B2 /* Font_Awesome_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Font_Awesome_Swift.framework; path = "../../Library/Developer/Xcode/DerivedData/JapanComplete-awqdcknynpmyeufsrmwoofmludvr/Build/Products/Debug-iphonesimulator/Font-Awesome-Swift/Font_Awesome_Swift.framework"; sourceTree = "<group>"; };
 		1989B6271E10E455007E87B2 /* customTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customTabBarController.swift; sourceTree = "<group>"; };
 		1989B6291E10E9D5007E87B2 /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +134,6 @@
 		19FB32941E11573900AD8404 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		19FB32961E11574C00AD8404 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		19FB32981E116C9800AD8404 /* ColorDef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDef.swift; sourceTree = "<group>"; };
-		19FB329A1E117A6F00AD8404 /* Areas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Areas.plist; sourceTree = "<group>"; };
 		19FB329F1E1185E100AD8404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19FB32A41E11870200AD8404 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		726870F010954BBEECAC18E1 /* Pods_JapanCompleteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JapanCompleteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,8 +194,8 @@
 				19B01B2C1E0FCF7200AE46F8 /* JapanComplete */,
 				19B01B8C1E0FD0C000AE46F8 /* html */,
 				19B01B901E0FD0C000AE46F8 /* icon */,
-				19FB329A1E117A6F00AD8404 /* Areas.plist */,
 				19FB32A01E1185E100AD8404 /* Localizable.strings */,
+				192A82B11E1219EC00A9C2E1 /* prefecture.json */,
 				19B01B411E0FCF7300AE46F8 /* JapanCompleteTests */,
 				19B01B4C1E0FCF7300AE46F8 /* JapanCompleteUITests */,
 				19B01B2B1E0FCF7200AE46F8 /* Products */,
@@ -455,12 +455,12 @@
 				19B01B381E0FCF7300AE46F8 /* LaunchScreen.storyboard in Resources */,
 				19B01BBA1E0FD0C100AE46F8 /* pen@2x.png in Resources */,
 				19B01BB91E0FD0C100AE46F8 /* map@2x.png in Resources */,
+				192A82B21E1219EC00A9C2E1 /* prefecture.json in Resources */,
 				19B01BAC1E0FD0C000AE46F8 /* Icon-60@2x.png in Resources */,
 				19B01BBC1E0FD0C100AE46F8 /* test.png in Resources */,
 				19B01BA61E0FD0C000AE46F8 /* event.js in Resources */,
 				19B01BB71E0FD0C100AE46F8 /* LaunchImage640x960.png in Resources */,
 				19B01BB41E0FD0C100AE46F8 /* icon40@2x.png in Resources */,
-				19FB329B1E117A6F00AD8404 /* Areas.plist in Resources */,
 				19B01BB11E0FD0C000AE46F8 /* Icon-Small@2x.png in Resources */,
 				19B01BAF1E0FD0C000AE46F8 /* Icon-76@2x.png in Resources */,
 				19B01BBB1E0FD0C100AE46F8 /* share@2x.png in Resources */,
