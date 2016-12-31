@@ -8,14 +8,25 @@
 
 import UIKit
 
-class historyViewController: UIPageViewController {
+class historyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpperBar()
+        
     }
 
+    //画面上部のデザイン設定
+    func setUpperBar(){
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+//        self.navigationItem.title = NSLocalizedString("mapTitle", comment: "")
+        
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

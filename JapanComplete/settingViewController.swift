@@ -12,10 +12,20 @@ class settingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpperBar()
 
-        // Do any additional setup after loading the view.
     }
 
+    //画面上部のデザイン設定
+    func setUpperBar(){
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+                self.navigationItem.title = NSLocalizedString("setting", comment: "")
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
