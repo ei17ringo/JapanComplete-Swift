@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,12 +22,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTS-3o-mH4">
-                                <rect key="frame" x="2" y="64" width="371" height="400"/>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lTS-3o-mH4">
+                                <rect key="frame" x="5" y="64" width="365" height="360"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="12k-O9-HeV"/>
+                                </constraints>
                             </webView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score:20% 10/47" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JM-x3-xip">
-                                <rect key="frame" x="16" y="484" width="343" height="21"/>
+                                <rect key="frame" x="16" y="431" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,13 +38,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1JM-x3-xip" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="4DU-wM-i0E"/>
-                            <constraint firstItem="1JM-x3-xip" firstAttribute="top" secondItem="lTS-3o-mH4" secondAttribute="bottom" constant="20" id="HxT-f6-rca"/>
+                            <constraint firstItem="lTS-3o-mH4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="571-v1-Qo8"/>
+                            <constraint firstItem="1JM-x3-xip" firstAttribute="top" secondItem="lTS-3o-mH4" secondAttribute="bottom" constant="7" id="8qT-bm-we6"/>
+                            <constraint firstItem="lTS-3o-mH4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="BBe-B6-KVI"/>
                             <constraint firstAttribute="trailing" secondItem="lTS-3o-mH4" secondAttribute="trailing" constant="2" id="NQE-Po-USm"/>
+                            <constraint firstAttribute="trailing" secondItem="lTS-3o-mH4" secondAttribute="trailing" constant="5" id="VRs-Ih-LMM"/>
                             <constraint firstItem="lTS-3o-mH4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dG2-I6-bVf"/>
                             <constraint firstItem="lTS-3o-mH4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="2" id="dMO-kg-IGf"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lTS-3o-mH4" secondAttribute="bottom" constant="154" id="tNN-bY-peQ"/>
-                            <constraint firstAttribute="trailing" secondItem="1JM-x3-xip" secondAttribute="trailing" constant="16" id="zBi-si-n72"/>
+                            <constraint firstItem="1JM-x3-xip" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fFK-XA-IqA"/>
+                            <constraint firstItem="1JM-x3-xip" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hzF-SI-eQA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="lessThanOrEqual" secondItem="1JM-x3-xip" secondAttribute="bottom" constant="166" id="tWY-tc-ZXn"/>
+                            <constraint firstItem="1JM-x3-xip" firstAttribute="top" secondItem="lTS-3o-mH4" secondAttribute="bottom" constant="7" id="wJc-U2-vyQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your Japan Map" id="YkV-RH-rFN">
@@ -61,6 +69,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="share"/>
+                                <connections>
+                                    <action selector="tapShareBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fwV-u0-xo2"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -96,7 +107,7 @@
         <!--History View Controller-->
         <scene sceneID="r7G-Wj-06G">
             <objects>
-                <viewController id="TBh-Oy-9nd" customClass="historyViewController" customModule="JapanComplete" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="TBh-Oy-9nd" customClass="historyViewController" customModule="JapanComplete" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gsW-dW-EMl"/>
                         <viewControllerLayoutGuide type="bottom" id="ZsK-mj-Cj2"/>
@@ -104,7 +115,23 @@
                     <view key="view" contentMode="scaleToFill" id="4KT-6d-ZuD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lHE-vo-P1F">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="TBh-Oy-9nd" id="RXd-Be-IZ4"/>
+                                    <outlet property="delegate" destination="TBh-Oy-9nd" id="PqL-WZ-Yyo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZsK-mj-Cj2" firstAttribute="top" secondItem="lHE-vo-P1F" secondAttribute="bottom" id="1gT-sD-dFm"/>
+                            <constraint firstItem="lHE-vo-P1F" firstAttribute="leading" secondItem="4KT-6d-ZuD" secondAttribute="leading" id="8hK-rV-pbT"/>
+                            <constraint firstItem="lHE-vo-P1F" firstAttribute="top" secondItem="gsW-dW-EMl" secondAttribute="bottom" id="hFZ-GH-kfR"/>
+                            <constraint firstAttribute="trailing" secondItem="lHE-vo-P1F" secondAttribute="trailing" id="lVN-gi-mcw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MLl-RY-MlF">
                         <nil key="title"/>
@@ -117,8 +144,15 @@
                                 <segment title="Shared"/>
                             </segments>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="selectChanged:" destination="TBh-Oy-9nd" eventType="valueChanged" id="7Oi-2B-m6N"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="historyTableView" destination="lHE-vo-P1F" id="DAr-L7-Rqy"/>
+                        <outlet property="listTypeSegment" destination="l19-Ek-2gd" id="rj4-M2-I5t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxG-fh-cwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

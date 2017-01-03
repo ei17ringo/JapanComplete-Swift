@@ -9,6 +9,7 @@
 import UIKit
 import Font_Awesome_Swift
 import GoogleMobileAds
+import Accounts
 
 class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
 
@@ -73,6 +74,50 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         mapWebView.loadRequest(request)
         
         mapWebView.delegate = self
+    }
+    
+    //シェアボタンタップ時
+    @IBAction func tapShareBtn(_ sender: UIButton) {
+        
+        //履歴情報として保存
+        
+        
+        
+        
+        //共有する項目の設定
+        //テキスト
+        let shareText = percentageText.text
+        //URL
+        //let shareWebsite:URL = URL(string: "https://itunes.apple.com/us/app/japancomplete/id842436484?mt=8")!
+            
+        //地図画像
+        let shareImage = screenshotWithView()
+        
+        
+        //共有する項目を配列に指定
+        //let activityItems = [shareImage,shareText,shareWebsite] as [Any]
+        let activityItems = [shareImage,shareText] as [Any]
+        
+        
+        //ActivityViewの作成、初期化
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities:nil)
+        
+        self.present(activityVC, animated:true, completion: nil)
+
+    }
+    
+    
+    
+    // 地図スクリーンショット作成
+    func screenshotWithView()->UIImage{
+        let rect = mapWebView.bounds
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        let context: CGContext = UIGraphicsGetCurrentContext()!
+        mapWebView.layer.render(in: context)
+        let capturedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return capturedImage
     }
     
     //画面上部のデザイン設定
