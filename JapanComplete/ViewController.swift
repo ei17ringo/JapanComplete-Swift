@@ -22,17 +22,12 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
     @IBOutlet weak var percentageText: UILabel!
     
     var colorArea:NSMutableDictionary = NSMutableDictionary()
-    
-
-
+    var historyData:NSMutableDictionary = NSMutableDictionary()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //広告表示
-        viewAdmob()
-        
-        //画面上部のデザイン設定
+                //画面上部のデザイン設定
         setUpperBar()
         
         //初期表示はUserDefaultに値を作成
@@ -49,13 +44,27 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         
         print(colorArea)
         
+        var tmph:NSMutableDictionary! = areaDefault.object(forKey: "historyData") as! NSMutableDictionary!
+        if tmph != nil {
+            historyData = tmph!.mutableCopy() as! NSMutableDictionary
+            print("success to get data from UserDefault")
+            
+        }else{
+            
+        }
+        
+        print(colorArea)
+        
         //map表示
         viewMap()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       
+        //広告表示
+        viewAdmob()
+        
+
     }
 
     // map表示
@@ -80,8 +89,31 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
     @IBAction func tapShareBtn(_ sender: UIButton) {
         
         //履歴情報として保存
+        var now = Date()
+
+        //ファイル名用
+        var dfForFile = DateFormatter()
+        dfForFile.dateFormat = "yyyyMMdd_HHmmss"
+        var strForFile = dfForFile.string(from: now)
         
+        //データ保存用キー
+        var dfKey = DateFormatter()
+        dfKey.dateFormat = "yyyy/MM/dd_HH:mm:ss"
+        var strNowKey = dfKey.string(from: now)
+
+        var fileName = "\(strForFile).png"
         
+        //現在時刻をキーに指定し、Historyデータに保存
+        var retDictionary:NSMutableDictionary = historyData.mutableCopy() as! NSMutableDictionary
+        
+        retDictionary.setObject(fileName, forKey: strNowKey as NSCopying)
+        
+        historyData = retDictionary
+        
+        var historyDefault = UserDefaults.standard
+        
+        historyDefault.set(historyData, forKey: "historyData")
+        historyDefault.synchronize()
         
         
         //共有する項目の設定
@@ -92,6 +124,23 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
             
         //地図画像
         let shareImage = screenshotWithView()
+        
+        //画像をディレクトリに保存
+        // DocumentディレクトリのfileURLを取得
+        if let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last {
+            
+            // ディレクトリのパスにファイル名をつなげてファイルのフルパスを作る
+            let targetImageFilePath = documentDirectoryFileURL.appendingPathComponent(fileName)
+            
+            print("書き込むファイルのパス: \(targetImageFilePath)")
+            
+            do {
+                var imageData = UIImagePNGRepresentation(shareImage)
+                try imageData?.write(to: targetImageFilePath)
+            } catch let error as NSError {
+                print("failed to write: \(error)")
+            }
+        }
         
         
         //共有する項目を配列に指定

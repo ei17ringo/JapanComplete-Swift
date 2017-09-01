@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zqc-ZH-HqB">
-    <device id="retina4_7" orientation="portrait">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Zqc-ZH-HqB">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,18 +19,18 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lTS-3o-mH4">
-                                <rect key="frame" x="5" y="64" width="365" height="360"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTS-3o-mH4">
+                                <rect key="frame" x="0.0" y="64" width="320" height="360"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="360" id="12k-O9-HeV"/>
                                 </constraints>
                             </webView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score:20% 10/47" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JM-x3-xip">
-                                <rect key="frame" x="16" y="431" width="343" height="21"/>
+                                <rect key="frame" x="16" y="431" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,11 +40,11 @@
                         <constraints>
                             <constraint firstItem="lTS-3o-mH4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="571-v1-Qo8"/>
                             <constraint firstItem="1JM-x3-xip" firstAttribute="top" secondItem="lTS-3o-mH4" secondAttribute="bottom" constant="7" id="8qT-bm-we6"/>
-                            <constraint firstItem="lTS-3o-mH4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="BBe-B6-KVI"/>
-                            <constraint firstAttribute="trailing" secondItem="lTS-3o-mH4" secondAttribute="trailing" constant="2" id="NQE-Po-USm"/>
-                            <constraint firstAttribute="trailing" secondItem="lTS-3o-mH4" secondAttribute="trailing" constant="5" id="VRs-Ih-LMM"/>
+                            <constraint firstItem="lTS-3o-mH4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BBe-B6-KVI"/>
+                            <constraint firstAttribute="trailing" secondItem="lTS-3o-mH4" secondAttribute="trailing" id="NQE-Po-USm"/>
+                            <constraint firstAttribute="trailing" secondItem="lTS-3o-mH4" secondAttribute="trailing" id="VRs-Ih-LMM"/>
                             <constraint firstItem="lTS-3o-mH4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dG2-I6-bVf"/>
-                            <constraint firstItem="lTS-3o-mH4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="2" id="dMO-kg-IGf"/>
+                            <constraint firstItem="lTS-3o-mH4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dMO-kg-IGf"/>
                             <constraint firstItem="1JM-x3-xip" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fFK-XA-IqA"/>
                             <constraint firstItem="1JM-x3-xip" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hzF-SI-eQA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="lessThanOrEqual" secondItem="1JM-x3-xip" secondAttribute="bottom" constant="166" id="tWY-tc-ZXn"/>
@@ -65,7 +65,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="lu4-A4-byX">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a4w-UR-0V2">
-                                <rect key="frame" x="329" y="7" width="30" height="30"/>
+                                <rect key="frame" x="274" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="share"/>
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015.2" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2013.75" y="138.38028169014083"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="yPS-Lh-5hZ">
@@ -95,7 +95,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LnX-V2-PfT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Z73-Pb-WNy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -113,12 +113,22 @@
                         <viewControllerLayoutGuide type="bottom" id="ZsK-mj-Cj2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4KT-6d-ZuD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lHE-vo-P1F">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="c8E-n2-BG7">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c8E-n2-BG7" id="aft-Yc-KR6">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="TBh-Oy-9nd" id="RXd-Be-IZ4"/>
                                     <outlet property="delegate" destination="TBh-Oy-9nd" id="PqL-WZ-Yyo"/>
@@ -136,7 +146,7 @@
                     <navigationItem key="navigationItem" id="MLl-RY-MlF">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="l19-Ek-2gd">
-                            <rect key="frame" x="28" y="7" width="320" height="30"/>
+                            <rect key="frame" x="8" y="7" width="304" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Not Completed"/>
@@ -152,11 +162,45 @@
                     <connections>
                         <outlet property="historyTableView" destination="lHE-vo-P1F" id="DAr-L7-Rqy"/>
                         <outlet property="listTypeSegment" destination="l19-Ek-2gd" id="rj4-M2-I5t"/>
+                        <segue destination="Zjm-4B-hJo" kind="show" identifier="toWiki" id="Dbf-1E-LrR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxG-fh-cwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2015.2" y="900.89955022488766"/>
+        </scene>
+        <!--Wiki View Controller-->
+        <scene sceneID="YpG-EG-lQz">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Zjm-4B-hJo" customClass="wikiViewController" customModule="JapanComplete" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aJb-G9-OBs"/>
+                        <viewControllerLayoutGuide type="bottom" id="bDR-wU-YiO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t6C-qO-7dT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lC-dJ-i3F">
+                                <rect key="frame" x="0.0" y="64" width="320" height="405"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bDR-wU-YiO" firstAttribute="top" secondItem="2lC-dJ-i3F" secondAttribute="bottom" constant="50" id="pLf-E6-ZFf"/>
+                            <constraint firstItem="2lC-dJ-i3F" firstAttribute="top" secondItem="aJb-G9-OBs" secondAttribute="bottom" id="qTb-a7-onA"/>
+                            <constraint firstAttribute="trailing" secondItem="2lC-dJ-i3F" secondAttribute="trailing" id="rnZ-VE-YOS"/>
+                            <constraint firstItem="2lC-dJ-i3F" firstAttribute="leading" secondItem="t6C-qO-7dT" secondAttribute="leading" id="vNm-k3-7Bk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="wikiPage" destination="2lC-dJ-i3F" id="UBc-5X-kY1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S0S-ju-MEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2761.875" y="900"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="qEX-E1-v5a">
@@ -167,7 +211,7 @@
                         <viewControllerLayoutGuide type="bottom" id="l57-CK-QKm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dmr-lz-JyK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -202,7 +246,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c3J-FP-Q7e" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" id="TAR-eC-RLY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6Nu-1M-D0p">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Nu-1M-D0p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -221,7 +265,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hv6-Tj-N9C" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="history" id="Wbs-U0-SVT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5p9-Tx-ZNw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5p9-Tx-ZNw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -240,7 +284,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CyQ-4X-I5M" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Setting" id="cPh-Nt-uzw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="l0C-Jh-Zqo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l0C-Jh-Zqo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

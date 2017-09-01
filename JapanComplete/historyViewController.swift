@@ -14,14 +14,23 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     @IBOutlet weak var historyTableView: UITableView!
     
+    var selectedName = ""
+    
     var tableData:NSMutableArray = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpperBar()
         
-        //NotCompletedの表示
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        //データの表示
         setTableData()
+
+        
 
     }
     
@@ -33,6 +42,39 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         let cell = UITableViewCell(style: .default, reuseIdentifier: "myCell")
         cell.textLabel?.text = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["name"] as! String
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedName = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["name"] as! String
+        
+        switch listTypeSegment.selectedSegmentIndex {
+        case 0:
+            performSegue(withIdentifier: "toWiki", sender: nil)
+            break
+        case 1:
+//            performSegue(withIdentifier: "toWiki", sender: nil)
+            break
+        default:
+            break
+        }
+  
+    }
+    
+    //画面遷移時
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        var segueID:String = segue.identifier!
+        
+        switch segueID {
+        case "toWiki":
+            var wikiPage:wikiViewController = segue.destination as! wikiViewController
+            wikiPage.displayedName = selectedName
+            break
+        default:
+            break
+        }
+        
     }
 
     @IBAction func selectChanged(_ sender: UISegmentedControl) {
@@ -93,9 +135,23 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
            
         case 2:
             // Share History
+            var historyDefault = UserDefaults.standard
+            var tmp:NSMutableDictionary! = historyDefault.object(forKey: "historyData") as! NSMutableDictionary!
+            if tmp != nil {
+                var keys:NSArray = tmp.allKeys as NSArray
+                
+                for i in 0 ..< (keys.count) {
+                    var key:String = keys[i] as! String
+                    var value:String = String(describing: tmp.object(forKey: key)!)
+                    
+                    if value != "0" {
+                        tableData.add(["name":key,"value":value])
+                    }
+                    
+                }
+            }
             
             break
-
             
         default:
             break
