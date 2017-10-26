@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  JapanComplete
+
+  Created by Eriko Ichinohe on 2016/12/27.
+  Copyright © 2016年 Eriko Ichinohe. All rights reserved.
+*/
+"mapTitle" = "Your Japan Map";
+"setting" = "Setting";
+"high" = "Lived here.";
+"middle" = "Traveled here.";
+"low" = "Stopped by here.";
+"colorDef" = "Color Definition";

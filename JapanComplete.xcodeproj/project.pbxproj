@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1928C0431F54349700FF67C6 /* wikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928C0421F54349700FF67C6 /* wikiViewController.swift */; };
 		192A82B21E1219EC00A9C2E1 /* prefecture.json in Resources */ = {isa = PBXBuildFile; fileRef = 192A82B11E1219EC00A9C2E1 /* prefecture.json */; };
+		19836F751FA1AFAD00F9A87B /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19836F741FA1AFAD00F9A87B /* EditTableViewCell.swift */; };
+		19836F771FA1AFD400F9A87B /* editCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19836F761FA1AFD400F9A87B /* editCell.xib */; };
 		1989B6261E10E356007E87B2 /* Font_Awesome_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B6251E10E356007E87B2 /* Font_Awesome_Swift.framework */; };
 		1989B6281E10E455007E87B2 /* customTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989B6271E10E455007E87B2 /* customTabBarController.swift */; };
 		1989B62A1E10E9D5007E87B2 /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989B6291E10E9D5007E87B2 /* settingViewController.swift */; };
@@ -84,6 +86,8 @@
 		06BCECFAC7369ABF075C4669 /* Pods_JapanCompleteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JapanCompleteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1928C0421F54349700FF67C6 /* wikiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wikiViewController.swift; sourceTree = "<group>"; };
 		192A82B11E1219EC00A9C2E1 /* prefecture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = prefecture.json; sourceTree = "<group>"; };
+		19836F741FA1AFAD00F9A87B /* EditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
+		19836F761FA1AFD400F9A87B /* editCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = editCell.xib; sourceTree = "<group>"; };
 		1989B6251E10E356007E87B2 /* Font_Awesome_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Font_Awesome_Swift.framework; path = "../../Library/Developer/Xcode/DerivedData/JapanComplete-awqdcknynpmyeufsrmwoofmludvr/Build/Products/Debug-iphonesimulator/Font-Awesome-Swift/Font_Awesome_Swift.framework"; sourceTree = "<group>"; };
 		1989B6271E10E455007E87B2 /* customTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customTabBarController.swift; sourceTree = "<group>"; };
 		1989B6291E10E9D5007E87B2 /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		1989B6391E1156F0007E87B2 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		1989B63B1E1156FF007E87B2 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		1989B63D1E115712007E87B2 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		199B934D1FA22DA2009BBB6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19B01B2A1E0FCF7200AE46F8 /* JapanComplete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapanComplete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B01B2D1E0FCF7300AE46F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19B01B2F1E0FCF7300AE46F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +238,8 @@
 				1989B6291E10E9D5007E87B2 /* settingViewController.swift */,
 				19FB32981E116C9800AD8404 /* ColorDef.swift */,
 				1928C0421F54349700FF67C6 /* wikiViewController.swift */,
+				19836F741FA1AFAD00F9A87B /* EditTableViewCell.swift */,
+				19836F761FA1AFD400F9A87B /* editCell.xib */,
 			);
 			path = JapanComplete;
 			sourceTree = "<group>";
@@ -436,9 +443,9 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 				ja,
+				en,
 			);
 			mainGroup = 19B01B211E0FCF7200AE46F8;
 			productRefGroup = 19B01B2B1E0FCF7200AE46F8 /* Products */;
@@ -481,6 +488,7 @@
 				19B01BA91E0FD0C000AE46F8 /* help@2x.png in Resources */,
 				19B01BAA1E0FD0C000AE46F8 /* Icon-40@2x.png in Resources */,
 				19B01B331E0FCF7300AE46F8 /* Main.storyboard in Resources */,
+				19836F771FA1AFD400F9A87B /* editCell.xib in Resources */,
 				19B01BA81E0FD0C000AE46F8 /* fullmap.png in Resources */,
 				19B01BB61E0FD0C100AE46F8 /* LaunchImage640x1136.png in Resources */,
 				19B01BB21E0FD0C000AE46F8 /* Icon-Small@3x.png in Resources */,
@@ -653,6 +661,7 @@
 				1989B62A1E10E9D5007E87B2 /* settingViewController.swift in Sources */,
 				19FB32991E116C9800AD8404 /* ColorDef.swift in Sources */,
 				19B01B2E1E0FCF7300AE46F8 /* AppDelegate.swift in Sources */,
+				19836F751FA1AFAD00F9A87B /* EditTableViewCell.swift in Sources */,
 				1928C0431F54349700FF67C6 /* wikiViewController.swift in Sources */,
 				19B01BBE1E10DF0B00AE46F8 /* historyViewController.swift in Sources */,
 			);
@@ -711,6 +720,7 @@
 			children = (
 				19FB329F1E1185E100AD8404 /* Base */,
 				19FB32A41E11870200AD8404 /* ja */,
+				199B934D1FA22DA2009BBB6D /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

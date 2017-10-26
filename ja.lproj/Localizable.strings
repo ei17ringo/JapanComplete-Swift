@@ -7,3 +7,7 @@
 */
 "mapTitle" = "あなたの日本地図";
 "setting" = "設定";
+"high" = "住んだ☆";
+"middle" = "旅行した";
+"low" = "立ち寄った";
+"colorDef" = "色の定義";

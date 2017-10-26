@@ -40,7 +40,21 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "myCell")
-        cell.textLabel?.text = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["name"] as! String
+        
+        
+        if listTypeSegment.selectedSegmentIndex == 2 {
+            
+            cell.textLabel?.text = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["name"] as! String
+            
+            //サムネイルの画像名を取得
+            var fileName = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["value"] as! String
+            let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
+            var fullPath = "\(documentDirectoryFileURL!)\(fileName)".replacingOccurrences(of: "file://", with: "")
+            var data = NSData(contentsOfFile: fullPath)
+            cell.imageView?.image = UIImage(data: data as! Data)
+        }else{
+            cell.textLabel?.text = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["name"] as! String
+        }
         return cell
     }
     

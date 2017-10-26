@@ -252,3 +252,13 @@ function setcolor(code,area_id){
 //});
 }
 
+function setdef(text_id,text){
+    newdef = document.getElementById(text_id);
+    newdef.innerHTML = text;
+    
+    if (text.length > 7) {
+        newdef.style.fontSize = "10";
+    }else{
+        newdef.style.fontSize = "14";
+    }
+}

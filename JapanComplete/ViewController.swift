@@ -11,6 +11,7 @@ import Font_Awesome_Swift
 import GoogleMobileAds
 import Accounts
 
+
 class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
 
     @IBOutlet weak var mapWebView: UIWebView!
@@ -23,6 +24,8 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
     
     var colorArea:NSMutableDictionary = NSMutableDictionary()
     var historyData:NSMutableDictionary = NSMutableDictionary()
+    
+    var color = [["name":"low","desc":NSLocalizedString("low", comment: "")],["name":"middle","desc":NSLocalizedString("middle", comment: "")],["name":"high","desc":NSLocalizedString("high", comment: "")]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +58,12 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         
         print(colorArea)
         
+        
+        
+        var myDefault = UserDefaults.standard
+        if (myDefault.object(forKey: "colorDef") != nil){
+            color = myDefault.object(forKey:"colorDef") as! [[String : String]]
+        }
         //map表示
         viewMap()
         
@@ -64,6 +73,18 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         //広告表示
         viewAdmob()
         
+        var myDefault = UserDefaults.standard
+        if (myDefault.object(forKey: "colorDef") != nil){
+            color = myDefault.object(forKey:"colorDef") as! [[String : String]]
+        }
+        
+        for eachcolor in color{
+            
+            
+            var cmd:String = "setdef('\(eachcolor["name"]!)_text','\(eachcolor["desc"]!)');"
+            
+            mapWebView.stringByEvaluatingJavaScript(from: cmd)
+        }
 
     }
 
@@ -71,6 +92,7 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
     func viewMap(){
         //WebViewいっぱいにmap.htmlを表示させる
         mapWebView.scalesPageToFit = true
+        mapWebView.contentMode = .scaleAspectFit
         
         //event.jsをWebViewにセット
         var filePathJS = Bundle.main.path(forResource: "event", ofType: "js")
@@ -182,26 +204,62 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
     }
     
     //UserDefaultに保存している値を地図に反映する
+    func webViewDidStartLoad(_ webView: UIWebView) {
+//        if colorArea.count == 0 {
+//            var areaDefault = UserDefaults.standard
+//            var tmp:NSMutableDictionary! = areaDefault.dictionary(forKey: "colorArea") as! NSMutableDictionary!
+//            colorArea = tmp
+//
+//        }
+//
+//        var keys:NSArray = colorArea.allKeys as NSArray
+//
+//        for i in 0 ..< (keys.count) {
+//            var key:String = keys[i] as! String
+//            var value:String = String(describing: colorArea.object(forKey: key)!)
+//
+//            var command:String = "setcolor('\(value)','\(key)');"
+//
+//            mapWebView.stringByEvaluatingJavaScript(from: command)
+//        }
+//
+//        for eachcolor in color{
+//
+//
+//            var cmd:String = "setdef('\(eachcolor["name"]!)_text','\(eachcolor["desc"]!)');"
+//
+//            mapWebView.stringByEvaluatingJavaScript(from: cmd)
+//        }
+    }
+    
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        
+
         if colorArea.count == 0 {
             var areaDefault = UserDefaults.standard
             var tmp:NSMutableDictionary! = areaDefault.dictionary(forKey: "colorArea") as! NSMutableDictionary!
             colorArea = tmp
 
         }
-        
+
         var keys:NSArray = colorArea.allKeys as NSArray
-        
+
         for i in 0 ..< (keys.count) {
             var key:String = keys[i] as! String
             var value:String = String(describing: colorArea.object(forKey: key)!)
-            
+
             var command:String = "setcolor('\(value)','\(key)');"
-            
+
             mapWebView.stringByEvaluatingJavaScript(from: command)
         }
-        
+
+        for eachcolor in color{
+
+
+            var cmd:String = "setdef('\(eachcolor["name"]!)_text','\(eachcolor["desc"]!)');"
+
+            mapWebView.stringByEvaluatingJavaScript(from: cmd)
+        }
+
 
     }
     
