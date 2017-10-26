@@ -8,14 +8,16 @@
 
 import UIKit
 
-class wikiViewController: UIViewController {
+class wikiViewController: UIViewController,UIWebViewDelegate {
 
     @IBOutlet weak var wikiPage: UIWebView!
     var displayedName = ""
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // インジケータを表示する
+        indicator.startAnimating()
         //日本語の場合
 //        var setURL = "https://ja.wikipedia.org/wiki/\(displayedName)"
         
@@ -43,6 +45,11 @@ class wikiViewController: UIViewController {
         wikiPage.loadRequest(myURLReq)
 
         
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        // インジケータを非表示にする
+        indicator.stopAnimating()
     }
 
     override func didReceiveMemoryWarning() {

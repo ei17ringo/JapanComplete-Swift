@@ -67,7 +67,7 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
             performSegue(withIdentifier: "toWiki", sender: nil)
             break
         case 1:
-//            performSegue(withIdentifier: "toWiki", sender: nil)
+            performSegue(withIdentifier: "toComplete", sender: nil)
             break
         default:
             break
@@ -84,6 +84,10 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         case "toWiki":
             var wikiPage:wikiViewController = segue.destination as! wikiViewController
             wikiPage.displayedName = selectedName
+            break
+        case "toComplete":
+            var compPage:completeViewController = segue.destination as! completeViewController
+//            wikiPage.displayedName = selectedName
             break
         default:
             break
@@ -163,6 +167,12 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
                     }
                     
                 }
+                
+                
+                var descriptor: NSSortDescriptor = NSSortDescriptor(key: "name", ascending: false)
+                var sortedResults: NSArray = tableData.sortedArray(using: [descriptor]) as! NSArray
+                tableData = sortedResults.mutableCopy() as! NSMutableArray
+                
             }
             
             break

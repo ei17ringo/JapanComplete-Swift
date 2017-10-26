@@ -24,6 +24,7 @@
 		1989B63A1E1156F0007E87B2 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B6391E1156F0007E87B2 /* EventKit.framework */; };
 		1989B63C1E1156FF007E87B2 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B63B1E1156FF007E87B2 /* EventKitUI.framework */; };
 		1989B63E1E115712007E87B2 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B63D1E115712007E87B2 /* Messages.framework */; };
+		199B934F1FA24079009BBB6D /* completeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B934E1FA24078009BBB6D /* completeViewController.swift */; };
 		19B01B2E1E0FCF7300AE46F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B01B2D1E0FCF7300AE46F8 /* AppDelegate.swift */; };
 		19B01B301E0FCF7300AE46F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B01B2F1E0FCF7300AE46F8 /* ViewController.swift */; };
 		19B01B331E0FCF7300AE46F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B01B311E0FCF7300AE46F8 /* Main.storyboard */; };
@@ -102,6 +103,7 @@
 		1989B63B1E1156FF007E87B2 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		1989B63D1E115712007E87B2 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		199B934D1FA22DA2009BBB6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		199B934E1FA24078009BBB6D /* completeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = completeViewController.swift; sourceTree = "<group>"; };
 		19B01B2A1E0FCF7200AE46F8 /* JapanComplete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapanComplete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B01B2D1E0FCF7300AE46F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19B01B2F1E0FCF7300AE46F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				1928C0421F54349700FF67C6 /* wikiViewController.swift */,
 				19836F741FA1AFAD00F9A87B /* EditTableViewCell.swift */,
 				19836F761FA1AFD400F9A87B /* editCell.xib */,
+				199B934E1FA24078009BBB6D /* completeViewController.swift */,
 			);
 			path = JapanComplete;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				19D05B331E16CA2900A8778F /* helpViewController.swift in Sources */,
 				1989B62A1E10E9D5007E87B2 /* settingViewController.swift in Sources */,
 				19FB32991E116C9800AD8404 /* ColorDef.swift in Sources */,
+				199B934F1FA24079009BBB6D /* completeViewController.swift in Sources */,
 				19B01B2E1E0FCF7300AE46F8 /* AppDelegate.swift in Sources */,
 				19836F751FA1AFAD00F9A87B /* EditTableViewCell.swift in Sources */,
 				1928C0431F54349700FF67C6 /* wikiViewController.swift in Sources */,
