@@ -15,6 +15,7 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
     @IBOutlet weak var historyTableView: UITableView!
     
     var selectedName = ""
+    var selectedFileName = ""
     
     var tableData:NSMutableArray = NSMutableArray()
     
@@ -26,6 +27,16 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        
+        
+//        var historyDefault = UserDefaults.standard
+//        var tmp:NSMutableDictionary! = historyDefault.object(forKey: "historyData") as! NSMutableDictionary!
+////        tmp["2017/10/26_23:09:15"] = nil
+//        tmp.removeObject(forKey: "2017/10/26_23:09:15")
+//
+//        historyDefault.set(tmp, forKey: "historyData")
+//        historyDefault.synchronize()
         
         //データの表示
         setTableData()
@@ -61,7 +72,7 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedName = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["name"] as! String
-        
+        selectedFileName = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["value"] as! String
         switch listTypeSegment.selectedSegmentIndex {
         case 0:
             performSegue(withIdentifier: "toWiki", sender: nil)
@@ -69,6 +80,8 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         case 1:
             performSegue(withIdentifier: "toComplete", sender: nil)
             break
+        case 2:
+            performSegue(withIdentifier: "toDetail", sender: nil)
         default:
             break
         }
@@ -88,6 +101,10 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         case "toComplete":
             var compPage:completeViewController = segue.destination as! completeViewController
 //            wikiPage.displayedName = selectedName
+            break
+        case "toDetail":
+            var detailPage:detailViewController = segue.destination as! detailViewController
+            detailPage.displayFileName = selectedFileName
             break
         default:
             break
@@ -173,6 +190,8 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 var sortedResults: NSArray = tableData.sortedArray(using: [descriptor]) as! NSArray
                 tableData = sortedResults.mutableCopy() as! NSMutableArray
                 
+                print(tableData)
+                
             }
             
             break
@@ -180,6 +199,8 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         default:
             break
         }
+        
+        historyTableView.reloadData()
         
     }
     
