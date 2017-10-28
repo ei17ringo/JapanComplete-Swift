@@ -329,29 +329,12 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         
         let perfectNumber:Float = 47.00
         var percentage:Float = Float(countColored) / perfectNumber * 100.00
+        var percentString:String = NSString(format: "%.2f", percentage) as String
         
-        percentageText.text = "Your Score : \(percentage)% \(countColored) / 47 areas"
+        percentageText.text = "Your Complete : \(percentString)%    \(countColored) / 47 areas"
 
     }
-    
-    
-//    // 広告表示
-//    func viewAdmob(){
-//        // AdMob広告設定
-//        var bannerView: GADBannerView = GADBannerView()
-//        bannerView = GADBannerView(adSize:kGADAdSizeBanner)
-//        bannerView.frame.origin = CGPoint(x:0, y:self.view.frame.size.height - bannerView.frame.height)
-//        bannerView.frame.size = CGSize(width:self.view.frame.width, height:bannerView.frame.height)
-//        // AdMobで発行された広告ユニットIDを設定
-//        bannerView.adUnitID = "ca-app-pub-2022584086765592/3808017463"
-//        bannerView.delegate = self
-//        bannerView.rootViewController = self
-//        let gadRequest:GADRequest = GADRequest()
-//        // テスト用の広告を表示する時のみ使用（申請時に削除）
-//        gadRequest.testDevices = ["6c4aa6ef5598dabd487943fc0d3be29328763771"]
-//        bannerView.load(gadRequest)
-//        self.view.addSubview(bannerView)
-//    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
