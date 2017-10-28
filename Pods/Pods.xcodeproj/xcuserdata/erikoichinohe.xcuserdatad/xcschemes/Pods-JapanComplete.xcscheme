@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "41494FA0489EB1B055ABEEDDFC05B27E"
+               BlueprintIdentifier = "2AF73642C573C5B183E37C70FEC0139D"
                BuildableName = "Pods_JapanComplete.framework"
                BlueprintName = "Pods-JapanComplete"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "41494FA0489EB1B055ABEEDDFC05B27E"
+            BlueprintIdentifier = "2AF73642C573C5B183E37C70FEC0139D"
             BuildableName = "Pods_JapanComplete.framework"
             BlueprintName = "Pods-JapanComplete"
             ReferencedContainer = "container:Pods.xcodeproj">

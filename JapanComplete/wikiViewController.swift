@@ -18,14 +18,21 @@ class wikiViewController: UIViewController,UIWebViewDelegate {
         super.viewDidLoad()
         // インジケータを表示する
         indicator.startAnimating()
-        //日本語の場合
-//        var setURL = "https://ja.wikipedia.org/wiki/\(displayedName)"
         
-        var setURL = "https://en.wikipedia.org/wiki/\(displayedName)_Prefecture"
-        
-        if (displayedName == "Tokyo") || (displayedName == "Kyoto") || (displayedName == "Osaka") || (displayedName == "Hokkaido") {
-            setURL = "https://en.wikipedia.org/wiki/\(displayedName)"
-        }
+        //端末の表示言語を取得
+        let prefLang = Locale.preferredLanguages.first
+        var setURL = ""
+        setURL = "https://\(NSLocalizedString("wikidomain", comment: ""))/wiki/\(NSLocalizedString(displayedName, comment: ""))"
+//        if prefLang!.contains("ja-") {
+//            //日本語の場合
+//            setURL = "https://ja.wikipedia.org/wiki/\(NSLocalizedString(displayedName, comment: ""))"
+//        }else{
+//            setURL = "https://en.wikipedia.org/wiki/\(displayedName)_Prefecture"
+//
+//            if (displayedName == "Tokyo") || (displayedName == "Kyoto") || (displayedName == "Osaka") || (displayedName == "Hokkaido") {
+//                setURL = "https://en.wikipedia.org/wiki/\(displayedName)"
+//            }
+//        }
         
         var encodedURL = setURL.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
         

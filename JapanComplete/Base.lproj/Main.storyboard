@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -176,7 +176,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lC-dJ-i3F">
-                                <rect key="frame" x="0.0" y="64" width="320" height="405"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="405"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="Zjm-4B-hJo" id="NBe-0Y-dfN"/>
@@ -189,8 +189,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bDR-wU-YiO" firstAttribute="top" secondItem="2lC-dJ-i3F" secondAttribute="bottom" constant="50" id="pLf-E6-ZFf"/>
-                            <constraint firstItem="2lC-dJ-i3F" firstAttribute="top" secondItem="aJb-G9-OBs" secondAttribute="bottom" id="qTb-a7-onA"/>
+                            <constraint firstItem="bDR-wU-YiO" firstAttribute="top" secondItem="2lC-dJ-i3F" secondAttribute="bottom" constant="94" id="pLf-E6-ZFf"/>
+                            <constraint firstItem="2lC-dJ-i3F" firstAttribute="top" secondItem="aJb-G9-OBs" secondAttribute="bottom" constant="-44" id="qTb-a7-onA"/>
                             <constraint firstAttribute="trailing" secondItem="2lC-dJ-i3F" secondAttribute="trailing" id="rnZ-VE-YOS"/>
                             <constraint firstItem="2lC-dJ-i3F" firstAttribute="leading" secondItem="t6C-qO-7dT" secondAttribute="leading" id="vNm-k3-7Bk"/>
                         </constraints>
@@ -262,7 +262,7 @@
         <!--Complete View Controller-->
         <scene sceneID="wv3-BT-pjR">
             <objects>
-                <viewController id="pYV-bs-T5x" customClass="completeViewController" customModule="JapanComplete" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="pYV-bs-T5x" customClass="completeViewController" customModule="JapanComplete" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Roz-KH-HER"/>
                         <viewControllerLayoutGuide type="bottom" id="bg0-Yt-bAd"/>
@@ -271,20 +271,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="can see instagram photo!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kF-T9-GK5">
-                                <rect key="frame" x="63" y="209" width="194" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OlI-l6-dHt">
+                                <rect key="frame" x="8" y="146" width="304" height="285"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="285" id="X4t-x7-Sqv"/>
+                                </constraints>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkr-aI-h7s">
+                                <rect key="frame" x="0.0" y="64" width="320" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kF-T9-GK5" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="40" y="72" width="241" height="111"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8pz-Um-t07" appends="YES" id="s2X-7x-gLh"/>
+                                </connections>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OlI-l6-dHt" firstAttribute="centerX" secondItem="rhP-2R-JtO" secondAttribute="centerX" id="0Eq-DX-jCn"/>
+                            <constraint firstItem="OlI-l6-dHt" firstAttribute="leading" secondItem="rhP-2R-JtO" secondAttribute="leadingMargin" constant="-8" id="1iB-EW-sEn"/>
+                            <constraint firstItem="OlI-l6-dHt" firstAttribute="top" secondItem="8kF-T9-GK5" secondAttribute="bottom" constant="-37" id="6AG-F2-C2G"/>
+                            <constraint firstItem="8kF-T9-GK5" firstAttribute="leading" secondItem="rhP-2R-JtO" secondAttribute="leadingMargin" constant="24" id="9pV-0o-fkt"/>
+                            <constraint firstItem="zkr-aI-h7s" firstAttribute="centerY" secondItem="8kF-T9-GK5" secondAttribute="centerY" id="Drc-d3-c8S"/>
+                            <constraint firstItem="bg0-Yt-bAd" firstAttribute="top" secondItem="OlI-l6-dHt" secondAttribute="bottom" constant="88" id="JA4-Hg-l1F"/>
+                            <constraint firstItem="zkr-aI-h7s" firstAttribute="leading" secondItem="rhP-2R-JtO" secondAttribute="leading" id="jFv-cU-XoW"/>
+                            <constraint firstItem="zkr-aI-h7s" firstAttribute="top" secondItem="Roz-KH-HER" secondAttribute="bottom" id="jmG-dq-tfB"/>
+                            <constraint firstItem="OlI-l6-dHt" firstAttribute="centerX" secondItem="8kF-T9-GK5" secondAttribute="centerX" id="pxD-Nt-wUf"/>
+                            <constraint firstItem="8kF-T9-GK5" firstAttribute="top" secondItem="Roz-KH-HER" secondAttribute="bottom" constant="8" symbolic="YES" id="vGr-yW-LIj"/>
+                            <constraint firstItem="zkr-aI-h7s" firstAttribute="centerX" secondItem="8kF-T9-GK5" secondAttribute="centerX" id="xll-vs-IGj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="compGift" destination="OlI-l6-dHt" id="cyi-ot-G8p"/>
+                        <outlet property="compLabel" destination="8kF-T9-GK5" id="1ZQ-kN-HP3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fg2-FJ-JX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8pz-Um-t07">
+                    <connections>
+                        <action selector="tapCompLabel:" destination="pYV-bs-T5x" id="mhp-jm-gkw"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2897" y="1481"/>
+            <point key="canvasLocation" x="2896.875" y="1480.9859154929577"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="EQd-9q-Nqe">
@@ -301,7 +338,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kyc-9Y-ZCU">
                                 <rect key="frame" x="0.0" y="64" width="320" height="395"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="395" id="JOM-1W-0Od"/>
                                     <constraint firstAttribute="width" constant="320" id="rOI-Iv-blJ"/>
                                 </constraints>
                             </imageView>
@@ -309,15 +345,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Kyc-9Y-ZCU" firstAttribute="leading" secondItem="5Gj-OW-3Pb" secondAttribute="leadingMargin" constant="-16" id="6Bs-7t-B6d"/>
-                            <constraint firstItem="Kyc-9Y-ZCU" firstAttribute="top" secondItem="5Gj-OW-3Pb" secondAttribute="top" constant="64" id="88b-GW-V1j"/>
                             <constraint firstItem="Kyc-9Y-ZCU" firstAttribute="bottom" secondItem="dEC-Gt-Mtc" secondAttribute="top" constant="-60" id="S18-9c-sma"/>
                             <constraint firstItem="dEC-Gt-Mtc" firstAttribute="top" secondItem="Kyc-9Y-ZCU" secondAttribute="bottom" constant="60" id="UbM-Zd-1Hc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kyc-9Y-ZCU" secondAttribute="trailing" constant="-16" id="WI3-4I-OIe"/>
                             <constraint firstAttribute="trailing" secondItem="Kyc-9Y-ZCU" secondAttribute="trailing" id="WzY-wZ-6Y3"/>
                             <constraint firstItem="Kyc-9Y-ZCU" firstAttribute="centerX" secondItem="5Gj-OW-3Pb" secondAttribute="centerX" id="Xrg-yx-8I0"/>
                             <constraint firstItem="Kyc-9Y-ZCU" firstAttribute="leading" secondItem="5Gj-OW-3Pb" secondAttribute="leading" id="aMn-Hq-2QE"/>
-                            <constraint firstItem="Kyc-9Y-ZCU" firstAttribute="top" secondItem="fbG-Xh-T1Z" secondAttribute="bottom" id="bQ1-15-qLX"/>
-                            <constraint firstItem="Kyc-9Y-ZCU" firstAttribute="top" secondItem="5Gj-OW-3Pb" secondAttribute="top" constant="64" id="cGN-5u-S3B"/>
                             <constraint firstItem="Kyc-9Y-ZCU" firstAttribute="leading" secondItem="5Gj-OW-3Pb" secondAttribute="leading" id="eSv-lP-EcO"/>
                             <constraint firstItem="Kyc-9Y-ZCU" firstAttribute="bottom" secondItem="5Gj-OW-3Pb" secondAttribute="bottomMargin" constant="-60" id="i2C-qg-XkI"/>
                             <constraint firstItem="Kyc-9Y-ZCU" firstAttribute="top" secondItem="5Gj-OW-3Pb" secondAttribute="topMargin" id="jYY-10-CWU"/>

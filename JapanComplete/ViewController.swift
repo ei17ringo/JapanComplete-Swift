@@ -71,7 +71,9 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         //広告表示
-        viewAdmob()
+        let app:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        app.viewAdmob(self)
         
         var myDefault = UserDefaults.standard
         if (myDefault.object(forKey: "colorDef") != nil){
@@ -203,34 +205,6 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         shareButton.setFAIcon(icon: FAType.FAShareSquareO, forState: .normal)
     }
     
-    //UserDefaultに保存している値を地図に反映する
-    func webViewDidStartLoad(_ webView: UIWebView) {
-//        if colorArea.count == 0 {
-//            var areaDefault = UserDefaults.standard
-//            var tmp:NSMutableDictionary! = areaDefault.dictionary(forKey: "colorArea") as! NSMutableDictionary!
-//            colorArea = tmp
-//
-//        }
-//
-//        var keys:NSArray = colorArea.allKeys as NSArray
-//
-//        for i in 0 ..< (keys.count) {
-//            var key:String = keys[i] as! String
-//            var value:String = String(describing: colorArea.object(forKey: key)!)
-//
-//            var command:String = "setcolor('\(value)','\(key)');"
-//
-//            mapWebView.stringByEvaluatingJavaScript(from: command)
-//        }
-//
-//        for eachcolor in color{
-//
-//
-//            var cmd:String = "setdef('\(eachcolor["name"]!)_text','\(eachcolor["desc"]!)');"
-//
-//            mapWebView.stringByEvaluatingJavaScript(from: cmd)
-//        }
-    }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
 
@@ -361,23 +335,23 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
     }
     
     
-    // 広告表示
-    func viewAdmob(){
-        // AdMob広告設定
-        var bannerView: GADBannerView = GADBannerView()
-        bannerView = GADBannerView(adSize:kGADAdSizeBanner)
-        bannerView.frame.origin = CGPoint(x:0, y:self.view.frame.size.height - bannerView.frame.height)
-        bannerView.frame.size = CGSize(width:self.view.frame.width, height:bannerView.frame.height)
-        // AdMobで発行された広告ユニットIDを設定
-        bannerView.adUnitID = "ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX"
-        bannerView.delegate = self
-        bannerView.rootViewController = self
-        let gadRequest:GADRequest = GADRequest()
-        // テスト用の広告を表示する時のみ使用（申請時に削除）
-        gadRequest.testDevices = ["12345678abcdefgh"]
-        bannerView.load(gadRequest)
-        self.view.addSubview(bannerView)
-    }
+//    // 広告表示
+//    func viewAdmob(){
+//        // AdMob広告設定
+//        var bannerView: GADBannerView = GADBannerView()
+//        bannerView = GADBannerView(adSize:kGADAdSizeBanner)
+//        bannerView.frame.origin = CGPoint(x:0, y:self.view.frame.size.height - bannerView.frame.height)
+//        bannerView.frame.size = CGSize(width:self.view.frame.width, height:bannerView.frame.height)
+//        // AdMobで発行された広告ユニットIDを設定
+//        bannerView.adUnitID = "ca-app-pub-2022584086765592/3808017463"
+//        bannerView.delegate = self
+//        bannerView.rootViewController = self
+//        let gadRequest:GADRequest = GADRequest()
+//        // テスト用の広告を表示する時のみ使用（申請時に削除）
+//        gadRequest.testDevices = ["6c4aa6ef5598dabd487943fc0d3be29328763771"]
+//        bannerView.load(gadRequest)
+//        self.view.addSubview(bannerView)
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

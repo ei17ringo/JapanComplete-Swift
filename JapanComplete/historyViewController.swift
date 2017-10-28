@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class historyViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class historyViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,GADBannerViewDelegate {
 
     @IBOutlet weak var listTypeSegment: UISegmentedControl!
     
@@ -28,7 +29,10 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     override func viewWillAppear(_ animated: Bool) {
         
+        //広告表示
+        let app:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
+        app.viewAdmob(self)
         
 //        var historyDefault = UserDefaults.standard
 //        var tmp:NSMutableDictionary! = historyDefault.object(forKey: "historyData") as! NSMutableDictionary!
