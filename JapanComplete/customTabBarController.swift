@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Font_Awesome_Swift
+import FontAwesome_swift
 
 
 class customTabBarController: UITabBarController {
@@ -21,9 +21,14 @@ class customTabBarController: UITabBarController {
         self.tabBar.tintColor = UIColor.white
         
         
-        self.tabBar.items?[0].setFAIcon(icon: FAType.FAMapMarker)
+        
+//        self.tabBar.items?[0].setFAIcon(icon: FAType.FAMapMarker)
+        self.tabBar.items?[0].setTitleTextAttributes([NSAttributedString.Key.font:UIFont.fontAwesome(ofSize: 30, style: .brands)], for: .normal)
+        self.tabBar.items?[0].title = String.fontAwesomeIcon(name: .mapMarker)
 
-        self.tabBar.items?[2].setFAIcon(icon: FAType.FACog)
+//        self.tabBar.items?[2].setFAIcon(icon: FAType.FACog)
+         self.tabBar.items?[2].title = String.fontAwesomeIcon(name: .cog)
+        
 //        firstViewController?.tabBarItem.setFAIcon(icon: FAType.FAMapMarker)
    
     }

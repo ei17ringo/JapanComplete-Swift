@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class settingViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
+class settingViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,GADBannerViewDelegate {
     @IBOutlet weak var editButton: UIBarButtonItem!
     
     @IBOutlet weak var settingTable: UITableView!
@@ -27,6 +28,11 @@ class settingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         if (myDefault.object(forKey: "colorDef") != nil){
             color = myDefault.object(forKey:"colorDef") as! [[String : String]]
         }
+        
+        //広告表示
+        let app:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        app.viewAdmob(self)
         
     }
     
@@ -90,7 +96,7 @@ class settingViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return true }
-        let newLength = text.characters.count + string.characters.count - range.length
+        let newLength = text.count + string.count - range.length
         return newLength <= 10 // Bool
     }
     
@@ -99,7 +105,7 @@ class settingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
         self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
         self.navigationController?.navigationBar.tintColor = UIColor.white
-                self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
                 self.navigationItem.title = NSLocalizedString("setting", comment: "")
         
     }

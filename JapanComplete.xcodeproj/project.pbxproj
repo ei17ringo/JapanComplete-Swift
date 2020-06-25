@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		191B39F01FA463C50016A9F1 /* Spring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191B39F11FA463C50016A9F1 /* Spring.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		1928C0431F54349700FF67C6 /* wikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1928C0421F54349700FF67C6 /* wikiViewController.swift */; };
 		192A82B21E1219EC00A9C2E1 /* prefecture.json in Resources */ = {isa = PBXBuildFile; fileRef = 192A82B11E1219EC00A9C2E1 /* prefecture.json */; };
 		195C37711FA477B100BFB9EA /* EasyTipView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195C37721FA477B100BFB9EA /* EasyTipView.framework */; };
 		19836F751FA1AFAD00F9A87B /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19836F741FA1AFAD00F9A87B /* EditTableViewCell.swift */; };
 		19836F771FA1AFD400F9A87B /* editCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19836F761FA1AFD400F9A87B /* editCell.xib */; };
-		1989B6261E10E356007E87B2 /* Font_Awesome_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B6251E10E356007E87B2 /* Font_Awesome_Swift.framework */; };
 		1989B6281E10E455007E87B2 /* customTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989B6271E10E455007E87B2 /* customTabBarController.swift */; };
 		1989B62A1E10E9D5007E87B2 /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989B6291E10E9D5007E87B2 /* settingViewController.swift */; };
 		1989B62C1E115677007E87B2 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B62B1E115677007E87B2 /* GoogleMobileAds.framework */; };
@@ -25,9 +23,10 @@
 		1989B6381E1156DF007E87B2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B6371E1156DF007E87B2 /* CoreTelephony.framework */; };
 		1989B63A1E1156F0007E87B2 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B6391E1156F0007E87B2 /* EventKit.framework */; };
 		1989B63C1E1156FF007E87B2 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B63B1E1156FF007E87B2 /* EventKitUI.framework */; };
-		1989B63E1E115712007E87B2 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B63D1E115712007E87B2 /* Messages.framework */; };
 		199B934F1FA24079009BBB6D /* completeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B934E1FA24078009BBB6D /* completeViewController.swift */; };
 		199B93521FA24F37009BBB6D /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B93511FA24F37009BBB6D /* detailViewController.swift */; };
+		19AFCCE21FA5B6D0008D6809 /* Spring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191B39F11FA463C50016A9F1 /* Spring.framework */; };
+		19AFCCEB1FA5B7D0008D6809 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1989B63D1E115712007E87B2 /* Messages.framework */; };
 		19B01B2E1E0FCF7300AE46F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B01B2D1E0FCF7300AE46F8 /* AppDelegate.swift */; };
 		19B01B301E0FCF7300AE46F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B01B2F1E0FCF7300AE46F8 /* ViewController.swift */; };
 		19B01B331E0FCF7300AE46F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B01B311E0FCF7300AE46F8 /* Main.storyboard */; };
@@ -169,11 +168,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AFCCEB1FA5B7D0008D6809 /* Messages.framework in Frameworks */,
 				195C37711FA477B100BFB9EA /* EasyTipView.framework in Frameworks */,
-				191B39F01FA463C50016A9F1 /* Spring.framework in Frameworks */,
+				19AFCCE21FA5B6D0008D6809 /* Spring.framework in Frameworks */,
 				19FB32971E11574C00AD8404 /* SystemConfiguration.framework in Frameworks */,
 				19FB32951E11573900AD8404 /* StoreKit.framework in Frameworks */,
-				1989B63E1E115712007E87B2 /* Messages.framework in Frameworks */,
 				1989B63C1E1156FF007E87B2 /* EventKitUI.framework in Frameworks */,
 				1989B63A1E1156F0007E87B2 /* EventKit.framework in Frameworks */,
 				1989B6381E1156DF007E87B2 /* CoreTelephony.framework in Frameworks */,
@@ -183,7 +182,6 @@
 				1989B6301E1156A3007E87B2 /* AudioToolbox.framework in Frameworks */,
 				1989B62E1E115699007E87B2 /* AdSupport.framework in Frameworks */,
 				1989B62C1E115677007E87B2 /* GoogleMobileAds.framework in Frameworks */,
-				1989B6261E10E356007E87B2 /* Font_Awesome_Swift.framework in Frameworks */,
 				6A504AE896CA4BD30E00A07D /* Pods_JapanComplete.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,7 +370,6 @@
 				19B01B271E0FCF7200AE46F8 /* Frameworks */,
 				19B01B281E0FCF7200AE46F8 /* Resources */,
 				0C8B0F7E21BA7FCD52A9B466 /* [CP] Embed Pods Frameworks */,
-				9346B25C81EE89F1D9EFCCBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -391,8 +388,6 @@
 				19B01B3A1E0FCF7300AE46F8 /* Sources */,
 				19B01B3B1E0FCF7300AE46F8 /* Frameworks */,
 				19B01B3C1E0FCF7300AE46F8 /* Resources */,
-				8A689442D27E278956BAB597 /* [CP] Embed Pods Frameworks */,
-				DD54E56178EA641958CD17FB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -412,8 +407,6 @@
 				19B01B451E0FCF7300AE46F8 /* Sources */,
 				19B01B461E0FCF7300AE46F8 /* Frameworks */,
 				19B01B471E0FCF7300AE46F8 /* Resources */,
-				4F4E0727B3BEE291D18A4397 /* [CP] Embed Pods Frameworks */,
-				A68CEB686BE3C18CF4D3E53B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -438,7 +431,7 @@
 					19B01B291E0FCF7200AE46F8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = NF6KLZDSZ2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					19B01B3D1E0FCF7300AE46F8 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -459,6 +452,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				Base,
 				ja,
 				en,
@@ -535,35 +529,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JapanComplete/Pods-JapanComplete-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-JapanComplete/Pods-JapanComplete-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EasyTipView/EasyTipView.framework",
-				"${BUILT_PRODUCTS_DIR}/Font-Awesome-Swift/Font_Awesome_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyTipView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Font_Awesome_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JapanComplete/Pods-JapanComplete-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4F4E0727B3BEE291D18A4397 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JapanCompleteUITests/Pods-JapanCompleteUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JapanComplete/Pods-JapanComplete-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		80C97A9818B949EF1A970D5A /* [CP] Check Pods Manifest.lock */ = {
@@ -584,51 +563,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A689442D27E278956BAB597 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JapanCompleteTests/Pods-JapanCompleteTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9346B25C81EE89F1D9EFCCBA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JapanComplete/Pods-JapanComplete-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A68CEB686BE3C18CF4D3E53B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JapanCompleteUITests/Pods-JapanCompleteUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C7BEDC9AD3B0CEB1C0B74E2C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -645,21 +579,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD54E56178EA641958CD17FB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JapanCompleteTests/Pods-JapanCompleteTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E40EB530202308CB9699B172 /* [CP] Check Pods Manifest.lock */ = {
@@ -809,6 +728,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -852,6 +772,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -862,6 +783,9 @@
 			baseConfigurationReference = 7386EC193119AFDE5A59F087 /* Pods-JapanComplete.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = NF6KLZDSZ2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -872,7 +796,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erikoichinohe.JapanComplete;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE = "bf1821bc-614e-4aab-8f72-baefdfac8834";
+				PROVISIONING_PROFILE_SPECIFIER = JapanComplete2017;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -881,6 +807,9 @@
 			baseConfigurationReference = 7E5E02AA00143D60A144F68A /* Pods-JapanComplete.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = NF6KLZDSZ2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -891,7 +820,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erikoichinohe.JapanComplete;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE = "bf1821bc-614e-4aab-8f72-baefdfac8834";
+				PROVISIONING_PROFILE_SPECIFIER = JapanComplete2017;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -906,7 +837,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erikoichinohe.JapanCompleteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JapanComplete.app/JapanComplete";
 			};
 			name = Debug;
@@ -922,7 +853,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erikoichinohe.JapanCompleteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JapanComplete.app/JapanComplete";
 			};
 			name = Release;
@@ -937,7 +868,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erikoichinohe.JapanCompleteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = JapanComplete;
 			};
 			name = Debug;
@@ -952,7 +883,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.erikoichinohe.JapanCompleteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = JapanComplete;
 			};
 			name = Release;

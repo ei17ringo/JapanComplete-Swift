@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GADBannerViewDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
@@ -46,11 +46,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GADBannerViewDelegate {
     func viewAdmob(_ selfcotroller:UIViewController){
         // AdMob広告設定
         var bannerView: GADBannerView = GADBannerView()
+        bannerView.backgroundColor = UIColor.gray
         bannerView = GADBannerView(adSize:kGADAdSizeBanner)
-        bannerView.frame.origin = CGPoint(x:0, y:selfcotroller.view.frame.size.height - bannerView.frame.height)
+        bannerView.frame.origin = CGPoint(x:0, y:selfcotroller.view.frame.size.height - (bannerView.frame.height + (selfcotroller.tabBarController?.tabBar.frame.size.height)!))
         bannerView.frame.size = CGSize(width:selfcotroller.view.frame.width, height:bannerView.frame.height)
         
         //TODO:この部分はメモからコピペして使用すること
+        // AdMobで発行された広告ユニットIDを設定
+        bannerView.adUnitID = "jc-001"
+        bannerView.delegate = selfcotroller as! GADBannerViewDelegate
+        bannerView.rootViewController = selfcotroller
+        let gadRequest:GADRequest = GADRequest()
+//        // テスト用の広告を表示する時のみ使用（申請時に削除）
+        gadRequest.testDevices = ["6c4aa6ef5598dabd487943fc0d3be29328763771"]
+        bannerView.load(gadRequest)
+        selfcotroller.view.addSubview(bannerView)
     }
 
 

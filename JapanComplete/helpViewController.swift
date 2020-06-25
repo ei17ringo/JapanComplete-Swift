@@ -2,7 +2,7 @@ import UIKit
 class helpViewController: UIViewController, UIScrollViewDelegate {
 	let backgroundColor = UIColor(red: 97.0/255.0, green: 142.0/255.0, blue: 218.0/255.0, alpha: 1.0)
 	let slides = [
-		[ "image": "fullmap.png", "text": "Do you know how to use this app?"],
+		[ "image": "fullmap.png", "text": NSLocalizedString("howto", comment: "")],
 	]
 	let screen: CGRect = UIScreen.main.bounds
 	var scroll: UIScrollView?
@@ -32,7 +32,7 @@ class helpViewController: UIViewController, UIScrollViewDelegate {
 				textView.isEditable = false
 				textView.isSelectable = false
 				textView.textAlignment = NSTextAlignment.center
-				textView.font = UIFont.systemFont(ofSize: 20, weight: 0)
+                textView.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(rawValue: 0))
 				textView.textColor = UIColor.white
 				textView.backgroundColor = UIColor.clear
 				scroll?.addSubview(textView)
@@ -40,7 +40,7 @@ class helpViewController: UIViewController, UIScrollViewDelegate {
 		}
         scroll?.contentSize = CGSize(width:CGFloat(Int(screen.width) *  slides.count), height:screen.height * 0.5)
 		scroll?.delegate = self
-		dots?.addTarget(self, action: #selector(self.swipe(sender:)), for: UIControlEvents.valueChanged)
+        dots?.addTarget(self, action: #selector(self.swipe(sender:)), for: UIControl.Event.valueChanged)
 		let closeButton = UIButton()
 		closeButton.frame = CGRect(x: screen.width - 70, y: 20, width: 60, height: 60)
 		closeButton.setTitle("Skip", for: .normal)
@@ -50,7 +50,7 @@ class helpViewController: UIViewController, UIScrollViewDelegate {
 		view.addSubview(closeButton)
 	}
     
-	func pressed(sender: UIButton!) {
+    @objc func pressed(sender: UIButton!) {
 		self.dismiss(animated: true) { () -> Void in
 		}
 	}
@@ -76,7 +76,7 @@ class helpViewController: UIViewController, UIScrollViewDelegate {
                       height:h
 		)
 	}
-	func swipe(sender: AnyObject) -> () {
+    @objc func swipe(sender: AnyObject) -> () {
 		if let scrollView = scroll {
 			let x = CGFloat(dots!.currentPage) * scrollView.frame.size.width
             scroll?.setContentOffset(CGPoint(x:x, y:0), animated: true)

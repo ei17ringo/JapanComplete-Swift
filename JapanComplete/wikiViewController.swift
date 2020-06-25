@@ -23,16 +23,7 @@ class wikiViewController: UIViewController,UIWebViewDelegate {
         let prefLang = Locale.preferredLanguages.first
         var setURL = ""
         setURL = "https://\(NSLocalizedString("wikidomain", comment: ""))/wiki/\(NSLocalizedString(displayedName, comment: ""))"
-//        if prefLang!.contains("ja-") {
-//            //日本語の場合
-//            setURL = "https://ja.wikipedia.org/wiki/\(NSLocalizedString(displayedName, comment: ""))"
-//        }else{
-//            setURL = "https://en.wikipedia.org/wiki/\(displayedName)_Prefecture"
-//
-//            if (displayedName == "Tokyo") || (displayedName == "Kyoto") || (displayedName == "Osaka") || (displayedName == "Hokkaido") {
-//                setURL = "https://en.wikipedia.org/wiki/\(displayedName)"
-//            }
-//        }
+
         
         var encodedURL = setURL.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
         

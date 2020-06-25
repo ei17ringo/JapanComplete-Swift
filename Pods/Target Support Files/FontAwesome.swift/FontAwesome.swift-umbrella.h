@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Font_Awesome_SwiftVersionNumber;
-FOUNDATION_EXPORT const unsigned char Font_Awesome_SwiftVersionString[];
+FOUNDATION_EXPORT double FontAwesome_swiftVersionNumber;
+FOUNDATION_EXPORT const unsigned char FontAwesome_swiftVersionString[];
 

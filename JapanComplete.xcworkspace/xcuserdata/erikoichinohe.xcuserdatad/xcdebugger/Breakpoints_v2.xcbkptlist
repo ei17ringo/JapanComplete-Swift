@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "FECB18BD-1C96-4EAC-B155-9E8648C97709"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            uuid = "828E948F-7B3F-402A-9DA5-64CD3614B27A"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JapanComplete/helpViewController.swift"
-            timestampString = "504812214.910966"
+            filePath = "JapanComplete/ViewController.swift"
+            timestampString = "530976239.85123"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "getFrame(iW:iH:slide:offset:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

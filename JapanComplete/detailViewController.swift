@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class detailViewController: UIViewController {
+import GoogleMobileAds
+class detailViewController: UIViewController,GADBannerViewDelegate {
 
     @IBOutlet weak var detailImage: UIImageView!
     var displayFileName = ""
@@ -22,6 +22,12 @@ class detailViewController: UIViewController {
         detailImage.image = UIImage(data: data as! Data)
     
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(tapDelButton(_:)))
+        
+        
+        //広告表示
+        let app:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        app.viewAdmob(self)
     
     }
 

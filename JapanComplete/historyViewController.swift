@@ -68,7 +68,8 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
             var data = NSData(contentsOfFile: fullPath)
             cell.imageView?.image = UIImage(data: data as! Data)
         }else{
-            cell.textLabel?.text = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["name"] as! String
+            var areaName = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["name"] as! String
+            cell.textLabel?.text = NSLocalizedString(areaName, comment: "")
         }
         return cell
     }
@@ -95,19 +96,19 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
     //画面遷移時
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        var segueID:String = segue.identifier!
+        let segueID:String = segue.identifier!
         
         switch segueID {
         case "toWiki":
-            var wikiPage:wikiViewController = segue.destination as! wikiViewController
+            let wikiPage:wikiViewController = segue.destination as! wikiViewController
             wikiPage.displayedName = selectedName
             break
         case "toComplete":
-            var compPage:completeViewController = segue.destination as! completeViewController
-//            wikiPage.displayedName = selectedName
+            let compPage:completeViewController = segue.destination as! completeViewController
+            compPage.displayedName = selectedName
             break
         case "toDetail":
-            var detailPage:detailViewController = segue.destination as! detailViewController
+            let detailPage:detailViewController = segue.destination as! detailViewController
             detailPage.displayFileName = selectedFileName
             break
         default:
@@ -132,7 +133,7 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         case 0:
             //Not Completed
             var areaDefault = UserDefaults.standard
-            var tmp:NSMutableDictionary! = areaDefault.object(forKey: "colorArea") as! NSMutableDictionary!
+            var tmp:NSMutableDictionary! = areaDefault.object(forKey: "colorArea") as? NSMutableDictionary
             if tmp != nil {
                 
                 var keys:NSArray = tmp.allKeys as NSArray
@@ -153,7 +154,7 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         case 1:
             // Completed
             var areaDefault = UserDefaults.standard
-            var tmp:NSMutableDictionary! = areaDefault.object(forKey: "colorArea") as! NSMutableDictionary!
+            var tmp:NSMutableDictionary! = areaDefault.object(forKey: "colorArea") as? NSMutableDictionary
             if tmp != nil {
                 
                 var keys:NSArray = tmp.allKeys as NSArray
@@ -175,7 +176,7 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         case 2:
             // Share History
             var historyDefault = UserDefaults.standard
-            var tmp:NSMutableDictionary! = historyDefault.object(forKey: "historyData") as! NSMutableDictionary!
+            var tmp:NSMutableDictionary! = historyDefault.object(forKey: "historyData") as! NSMutableDictionary?
             if tmp != nil {
                 var keys:NSArray = tmp.allKeys as NSArray
                 

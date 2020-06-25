@@ -7,13 +7,14 @@
 //
 
 import UIKit
-import Font_Awesome_Swift
+import FontAwesome_swift
 import GoogleMobileAds
 import Accounts
 
 
 class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
 
+    @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var mapWebView: UIWebView!
     
     @IBOutlet weak var helpButton: UIButton!
@@ -35,7 +36,7 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         
         //初期表示はUserDefaultに値を作成
         var areaDefault = UserDefaults.standard
-        var tmp:NSMutableDictionary! = areaDefault.object(forKey: "colorArea") as! NSMutableDictionary!
+        var tmp:NSMutableDictionary! = areaDefault.object(forKey: "colorArea") as? NSMutableDictionary
         if tmp != nil {
             colorArea = tmp!.mutableCopy() as! NSMutableDictionary
             print("success to get data from UserDefault")
@@ -47,7 +48,7 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         
         print(colorArea)
         
-        var tmph:NSMutableDictionary! = areaDefault.object(forKey: "historyData") as! NSMutableDictionary!
+        var tmph:NSMutableDictionary! = areaDefault.object(forKey: "historyData") as! NSMutableDictionary?
         if tmph != nil {
             historyData = tmph!.mutableCopy() as! NSMutableDictionary
             print("success to get data from UserDefault")
@@ -95,6 +96,29 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         //WebViewいっぱいにmap.htmlを表示させる
         mapWebView.scalesPageToFit = true
         mapWebView.contentMode = .scaleAspectFit
+        
+        mapWebView.center = self.view.center
+        
+        print(self.view.frame.size.width)
+        
+        if (self.view.frame.size.width > 414){
+            //iPhone 6s Plus以上
+            var mapWidth = self.view.frame.size.width * 0.6
+            mapWebView.frame.size.width = mapWidth
+            mapWebView.frame.origin.x = (self.view.frame.size.width - mapWidth) / 2
+            mapWebView.frame.origin.y =  30
+            mapWebView.frame.size.height = mapWidth + 40
+        }else{
+            mapWebView.frame.size.width = self.view.frame.size.width
+            mapWebView.frame.origin.x = 0
+            mapWebView.frame.origin.y =  30
+            mapWebView.frame.size.height = self.view.frame.size.width + 40
+            mapWebView.contentMode = .scaleAspectFit
+            
+        }
+        percentageText.frame.size.width = mapWebView.frame.size.width
+        percentageText.frame.origin.x = mapWebView.frame.origin.x
+        
         
         //event.jsをWebViewにセット
         var filePathJS = Bundle.main.path(forResource: "event", ofType: "js")
@@ -159,7 +183,7 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
             print("書き込むファイルのパス: \(targetImageFilePath)")
             
             do {
-                var imageData = UIImagePNGRepresentation(shareImage)
+                var imageData = shareImage.pngData()
                 try imageData?.write(to: targetImageFilePath)
             } catch let error as NSError {
                 print("failed to write: \(error)")
@@ -183,10 +207,10 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
     
     // 地図スクリーンショット作成
     func screenshotWithView()->UIImage{
-        let rect = mapWebView.bounds
+        let rect = baseView.bounds
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         let context: CGContext = UIGraphicsGetCurrentContext()!
-        mapWebView.layer.render(in: context)
+        baseView.layer.render(in: context)
         let capturedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
@@ -198,11 +222,14 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         
         self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationItem.title = NSLocalizedString("mapTitle", comment: "")
         
-        helpButton.setFAIcon(icon: FAType.FAQuestionCircleO, forState: .normal)
-        shareButton.setFAIcon(icon: FAType.FAShareSquareO, forState: .normal)
+//        helpButton.setFAIcon(icon: FAType.FAQuestionCircleO, forState: .normal)
+//        shareButton.setFAIcon(icon: FAType.FAShareSquareO, forState: .normal)
+        
+        helpButton.setTitle(String.fontAwesomeIcon(name: .questionCircle), for: .normal)
+        shareButton.setTitle(String.fontAwesomeIcon(name: .shareSquare), for: .normal)
     }
     
     
@@ -210,7 +237,7 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
 
         if colorArea.count == 0 {
             var areaDefault = UserDefaults.standard
-            var tmp:NSMutableDictionary! = areaDefault.dictionary(forKey: "colorArea") as! NSMutableDictionary!
+            var tmp:NSMutableDictionary! = areaDefault.dictionary(forKey: "colorArea") as! NSMutableDictionary?
             colorArea = tmp
 
         }
@@ -238,7 +265,7 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
     }
     
     //javascriptから値を受け取りUserDefaultに設定する
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
         
         print(request.url)
         

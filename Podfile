@@ -6,9 +6,9 @@ target 'JapanComplete' do
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
   use_frameworks!
-pod 'Font-Awesome-Swift', '~> 1.5.3'
-pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
-pod 'EasyTipView', '~> 1.0.2'
+pod 'FontAwesome.swift'
+pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+pod 'EasyTipView', '~> 2.0.4'
 
   # Pods for JapanComplete
 

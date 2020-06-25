@@ -11,10 +11,11 @@ import Spring
 import EasyTipView
 import GoogleMobileAds
 
-class completeViewController: UIViewController ,EasyTipViewDelegate,GADBannerViewDelegate{
-    func easyTipViewDidDismiss(_ tipView: EasyTipView) {
-        print("dismiss")
-    }
+class completeViewController: UIViewController ,EasyTipViewDelegate,GADBannerViewDelegate,UIWebViewDelegate{
+    
+    var displayedName = ""
+    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
 
     @IBOutlet weak var compGift: UIWebView!
@@ -26,6 +27,7 @@ class completeViewController: UIViewController ,EasyTipViewDelegate,GADBannerVie
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        indicator.isHidden = true
         compLabel.animation = "squeezeDown"
         compLabel.animate()
         
@@ -34,10 +36,10 @@ class completeViewController: UIViewController ,EasyTipViewDelegate,GADBannerVie
         
         preferences.drawing.font = UIFont(name: "Futura-Medium", size: 13)!
         preferences.drawing.foregroundColor = UIColor.white
-        preferences.drawing.backgroundColor = UIColor(hue:0.46, saturation:0.99, brightness:0.6, alpha:1)
+        preferences.drawing.backgroundColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
         
         EasyTipView.globalPreferences = preferences
-        self.view.backgroundColor = UIColor(hue:0.75, saturation:0.01, brightness:0.96, alpha:1.00)
+//        self.view.backgroundColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
         
         self.setToolTip()
         
@@ -48,14 +50,28 @@ class completeViewController: UIViewController ,EasyTipViewDelegate,GADBannerVie
     }
 
     @IBAction func tapCompLabel(_ sender: UITapGestureRecognizer) {
-        compLabel.animation = "shake"
+        compLabel.animation = "wobble"
         compLabel.animate()
         
-//        var url:URL = URL(string:"https://ja.wikipedia.org/wiki/%E3%82%A8%E3%82%BE%E3%83%A2%E3%83%A2%E3%83%B3%E3%82%AC")!
+        self.tipView?.dismiss(withCompletion: {
+            print("Completion called!")
+        })
         
-        var url:URL = URL(string:"https://ja.wikipedia.org/wiki/%E3%83%93%E3%83%AF%E3%83%92%E3%82%AC%E3%82%A4")!
+        indicator.isHidden = false
+        indicator.startAnimating()
         
-        var req = URLRequest(url: url)
+        
+        var setURL = "https://\(NSLocalizedString("wikidomain", comment: ""))/wiki/\(NSLocalizedString(displayedName + "Gift", comment: ""))"
+        
+        var encodedURL = setURL.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        
+        guard let url = NSURL(string: encodedURL!) else {
+            encodedURL = "https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC"
+            return
+        }
+        //URLを指定
+        let myURL = URL(string: encodedURL!)
+        var req = URLRequest(url: myURL!)
         self.compGift!.loadRequest(req)
     }
     
@@ -66,11 +82,25 @@ class completeViewController: UIViewController ,EasyTipViewDelegate,GADBannerVie
                 print("Completion called!")
             })
         } else {
-            let text = "Tap this blue label.You can get rare information in Shiga."
+            let text = String.localizedStringWithFormat(NSLocalizedString("giftTooltip", comment: ""),NSLocalizedString(displayedName, comment: ""))
+            
             let tip = EasyTipView(text: text, delegate: self)
             tip.show(forView: compLabel)
             tipView = tip
         }
+    }
+    
+    func easyTipViewDidDismiss(_ tipView: EasyTipView) {
+        print("dismiss")
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        // インジケータを非表示にする
+        indicator.stopAnimating()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        tipView?.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {

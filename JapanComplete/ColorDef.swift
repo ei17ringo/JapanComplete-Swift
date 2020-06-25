@@ -9,9 +9,9 @@ extension UIColor {
         var hexStr = hexStr
         hexStr = hexStr.replacingOccurrences(of: "#", with: "")
         
-        if hexStr.characters.count == 3 {
+        if hexStr.count == 3 {
             var newHexStr = ""
-            for c in hexStr.characters {
+            for c in hexStr {
                 newHexStr += "\(c)\(c)"
             }
             hexStr = newHexStr
