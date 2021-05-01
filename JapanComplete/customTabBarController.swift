@@ -23,11 +23,21 @@ class customTabBarController: UITabBarController {
         
         
 //        self.tabBar.items?[0].setFAIcon(icon: FAType.FAMapMarker)
-        self.tabBar.items?[0].setTitleTextAttributes([NSAttributedString.Key.font:UIFont.fontAwesome(ofSize: 30, style: .brands)], for: .normal)
-        self.tabBar.items?[0].title = String.fontAwesomeIcon(name: .mapMarker)
+//        self.tabBar.items?[0].setTitleTextAttributes([NSAttributedString.Key.font:UIFont.fontAwesome(ofSize: 26, style: .solid)], for: .normal)
+        self.tabBar.items?[0].image = UIImage.fontAwesomeIcon(name: .mapMarkerAlt, style: .solid, textColor: .black, size: CGSize(width: 30.0, height: 30.0))
+        self.tabBar.items?[0].title = "Map"
+
+        //        self.tabBar.items?[0].title = String.fontAwesomeIcon(name: .mapMarkerAlt)
+
+        self.tabBar.items?[1].image = UIImage.fontAwesomeIcon(name: .history, style: .solid, textColor: .black, size: CGSize(width: 30.0, height: 30.0))
+        self.tabBar.items?[1].title = "History"
 
 //        self.tabBar.items?[2].setFAIcon(icon: FAType.FACog)
-         self.tabBar.items?[2].title = String.fontAwesomeIcon(name: .cog)
+//        self.tabBar.items?[2].setTitleTextAttributes([NSAttributedString.Key.font:UIFont.fontAwesome(ofSize: 26, style: .solid)], for: .normal)
+//        self.tabBar.items?[2].title = String.fontAwesomeIcon(name: .cog)
+        
+        self.tabBar.items?[2].image = UIImage.fontAwesomeIcon(name: .cog , style: .solid, textColor: .black, size: CGSize(width: 30.0, height: 28.0))
+        self.tabBar.items?[2].title = "Setting"
         
 //        firstViewController?.tabBarItem.setFAIcon(icon: FAType.FAMapMarker)
    

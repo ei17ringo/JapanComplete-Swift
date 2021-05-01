@@ -228,7 +228,11 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
 //        helpButton.setFAIcon(icon: FAType.FAQuestionCircleO, forState: .normal)
 //        shareButton.setFAIcon(icon: FAType.FAShareSquareO, forState: .normal)
         
+        helpButton.titleLabel?.font = UIFont.fontAwesome(ofSize: 26, style: .regular)
         helpButton.setTitle(String.fontAwesomeIcon(name: .questionCircle), for: .normal)
+        
+//        helpButton.setTitle(String.fontAwesomeIcon(name: .questionCircle), for: .normal)
+        shareButton.titleLabel?.font = UIFont.fontAwesome(ofSize: 26, style: .regular)
         shareButton.setTitle(String.fontAwesomeIcon(name: .shareSquare), for: .normal)
     }
     
