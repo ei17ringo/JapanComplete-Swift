@@ -9,6 +9,7 @@ platform :ios, '8.0'
 pod 'FontAwesome.swift'
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 pod 'EasyTipView', '~> 2.0.4'
+pod 'Google-Mobile-Ads-SDK'
 
   # Pods for JapanComplete
 

@@ -1,0 +1,12 @@
+# Mac
+.DS_Store
+
+# Xcode
+build/*
+
+#CocoaPod
+Pods/*
+
+#Certificate
+CertificateSigningRequest.certSigningRequest
+*.cer

@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GADBannerViewDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
         return true
     }
 
@@ -53,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GADBannerViewDelegate {
         
         //TODO:この部分はメモからコピペして使用すること
         // AdMobで発行された広告ユニットIDを設定
-        bannerView.adUnitID = "jc-001"
+        bannerView.adUnitID = "ca-app-pub-2022584086765592/3808017463"
         bannerView.delegate = selfcotroller as! GADBannerViewDelegate
         bannerView.rootViewController = selfcotroller
         let gadRequest:GADRequest = GADRequest()
