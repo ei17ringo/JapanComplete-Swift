@@ -72,7 +72,7 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedName = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["name"] as! String
-        selectedFileName = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["value"] as! String
+        selectedFileName = (tableData[(indexPath as NSIndexPath).row] as! NSDictionary)["value"] as! String
         switch listTypeSegment.selectedSegmentIndex {
         case 0:
             performSegue(withIdentifier: "toWiki", sender: nil)
@@ -187,7 +187,7 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 for i in 0 ..< (keys.count) {
                     var key:String = keys[i] as! String
 //                    var value:String = String(describing: tmp.object(forKey: key)!)
-                    var value:String = String(describing: tmp[key])
+                    var value:String = String(describing: tmp[key]!)
 
                     if value != "0" {
                         tableData.add(["name":key,"value":value])

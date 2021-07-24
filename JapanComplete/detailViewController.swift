@@ -16,8 +16,10 @@ class detailViewController: UIViewController,GADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
-        var fullPath = "\(documentDirectoryFileURL!)\(displayFileName)".replacingOccurrences(of: "file://", with: "")
+        let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!
+        
+        var fullPath = "\(documentDirectoryFileURL)\(displayFileName)".replacingOccurrences(of: "file://", with: "")
+        
         var data = NSData(contentsOfFile: fullPath)
         detailImage.image = UIImage(data: data as! Data)
     
