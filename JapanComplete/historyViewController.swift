@@ -34,14 +34,6 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
         app.viewAdmob(self)
         
-//        var historyDefault = UserDefaults.standard
-//        var tmp:NSMutableDictionary! = historyDefault.object(forKey: "historyData") as! NSMutableDictionary!
-////        tmp["2017/10/26_23:09:15"] = nil
-//        tmp.removeObject(forKey: "2017/10/26_23:09:15")
-//
-//        historyDefault.set(tmp, forKey: "historyData")
-//        historyDefault.synchronize()
-        
         //データの表示
         setTableData()
 
@@ -132,18 +124,21 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
         tableData = NSMutableArray()
         
+        let areaDefault = UserDefaults.standard
         switch listTypeSegment.selectedSegmentIndex {
         case 0:
             //Not Completed
-            var areaDefault = UserDefaults.standard
-            var tmp:NSMutableDictionary! = areaDefault.object(forKey: "colorArea") as? NSMutableDictionary
-            if tmp != nil {
+           
+            
+            let colorAreaTmp = areaDefault.object(forKey: "colorArea") as? NSDictionary
+            
+            if colorAreaTmp != nil {
                 
-                var keys:NSArray = tmp.allKeys as NSArray
+                let keys:NSArray = colorAreaTmp!.allKeys as NSArray
                 
                 for i in 0 ..< (keys.count) {
-                    var key:String = keys[i] as! String
-                    var value:String = String(describing: tmp.object(forKey: key)!)
+                    let key:String = keys[i] as! String
+                    let value:String = String(describing: colorAreaTmp!.object(forKey: key)!)
                     
                     if value == "0" {
                         tableData.add(["name":key,"value":value])
@@ -156,15 +151,16 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
             break
         case 1:
             // Completed
-            var areaDefault = UserDefaults.standard
-            var tmp:NSMutableDictionary! = areaDefault.object(forKey: "colorArea") as? NSMutableDictionary
-            if tmp != nil {
+            
+            let colorAreaTmp = areaDefault.object(forKey: "colorArea") as? NSDictionary
+            
+            if colorAreaTmp != nil {
                 
-                var keys:NSArray = tmp.allKeys as NSArray
+                let keys:NSArray = colorAreaTmp!.allKeys as NSArray
                 
                 for i in 0 ..< (keys.count) {
-                    var key:String = keys[i] as! String
-                    var value:String = String(describing: tmp.object(forKey: key)!)
+                    let key:String = keys[i] as! String
+                    let value:String = String(describing: colorAreaTmp!.object(forKey: key)!)
                     
                     if value != "0" {
                         tableData.add(["name":key,"value":value])
@@ -179,10 +175,12 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         case 2:
             // Share History
             var historyDefault = UserDefaults.standard
-//            var tmp:NSMutableDictionary! = historyDefault.object(forKey: "historyData") as! NSMutableDictionary?
-           
-            if historyDefault.object(forKey: "historyData")  != nil {
-                var tmp:[String : AnyObject] = historyDefault.object(forKey: "historyData") as! [String : AnyObject]
+            
+            let historyDataTmp = historyDefault.object(forKey: "historyData") as? NSDictionary
+                        
+            if historyDataTmp != nil {
+                
+                var tmp:[String : AnyObject] = (historyDataTmp!.mutableCopy() as! NSMutableDictionary) as! [String : AnyObject]
 //                var keys:NSArray = tmp.keys as NSArray
                 var keys:Array = [String](tmp.keys)
                 
