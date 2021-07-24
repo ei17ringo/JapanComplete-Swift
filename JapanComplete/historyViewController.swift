@@ -66,7 +66,10 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
             let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
             var fullPath = "\(documentDirectoryFileURL!)\(fileName)".replacingOccurrences(of: "file://", with: "")
             var data = NSData(contentsOfFile: fullPath)
-            cell.imageView?.image = UIImage(data: data as! Data)
+            
+            if data != nil {
+                cell.imageView?.image = UIImage(data: data as! Data)
+            }
         }else{
             var areaName = (tableData[(indexPath as! NSIndexPath).row] as! NSDictionary)["name"] as! String
             cell.textLabel?.text = NSLocalizedString(areaName, comment: "")
@@ -176,14 +179,18 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         case 2:
             // Share History
             var historyDefault = UserDefaults.standard
-            var tmp:NSMutableDictionary! = historyDefault.object(forKey: "historyData") as! NSMutableDictionary?
-            if tmp != nil {
-                var keys:NSArray = tmp.allKeys as NSArray
+//            var tmp:NSMutableDictionary! = historyDefault.object(forKey: "historyData") as! NSMutableDictionary?
+           
+            if historyDefault.object(forKey: "historyData")  != nil {
+                var tmp:[String : AnyObject] = historyDefault.object(forKey: "historyData") as! [String : AnyObject]
+//                var keys:NSArray = tmp.keys as NSArray
+                var keys:Array = [String](tmp.keys)
                 
                 for i in 0 ..< (keys.count) {
                     var key:String = keys[i] as! String
-                    var value:String = String(describing: tmp.object(forKey: key)!)
-                    
+//                    var value:String = String(describing: tmp.object(forKey: key)!)
+                    var value:String = String(describing: tmp[key])
+
                     if value != "0" {
                         tableData.add(["name":key,"value":value])
                     }

@@ -31,35 +31,14 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-                //画面上部のデザイン設定
+        //画面上部のデザイン設定
         setUpperBar()
         
         //初期表示はUserDefaultに値を作成
-        var areaDefault = UserDefaults.standard
-        var tmp:NSMutableDictionary! = areaDefault.object(forKey: "colorArea") as? NSMutableDictionary
-        if tmp != nil {
-            colorArea = tmp!.mutableCopy() as! NSMutableDictionary
-            print("success to get data from UserDefault")
-            calcPercentage()
-            
-        }else{
-            colorArea = setAreaDictionary("-1",areaID: "")
-        }
+        //エリアの記録情報を取得
+        getAreaLog()
         
         print(colorArea)
-        
-        var tmph:NSMutableDictionary! = areaDefault.object(forKey: "historyData") as! NSMutableDictionary?
-        if tmph != nil {
-            historyData = tmph!.mutableCopy() as! NSMutableDictionary
-            print("success to get data from UserDefault")
-            
-        }else{
-            
-        }
-        
-        print(colorArea)
-        
-        
         
         var myDefault = UserDefaults.standard
         if (myDefault.object(forKey: "colorDef") != nil){
@@ -217,7 +196,7 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         return capturedImage
     }
     
-    //画面上部のデザイン設定
+    // 画面上部のデザイン設定
     func setUpperBar(){
         
         self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
@@ -235,8 +214,25 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         shareButton.titleLabel?.font = UIFont.fontAwesome(ofSize: 26, style: .regular)
         shareButton.setTitle(String.fontAwesomeIcon(name: .shareSquare), for: .normal)
     }
+        
+    // エリアの記録情報を取得
+    func getAreaLog(){
+        var areaDefault = UserDefaults.standard
+        let colorAreaTmp = areaDefault.object(forKey: "colorArea") as? NSDictionary
+        if colorAreaTmp != nil {
+            colorArea = colorAreaTmp!.mutableCopy() as! NSMutableDictionary
+            print("success to get data from UserDefault")
+            calcPercentage()
+            
+        }else{
+            colorArea = setAreaDictionary("-1",areaID: "")
+        }
+        
+        print(colorArea)
+        
+    }
     
-    
+    // Webview関連
     func webViewDidFinishLoad(_ webView: UIWebView) {
 
         if colorArea.count == 0 {
@@ -307,10 +303,11 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
     //Area色ディクショナリー設定
     func setAreaDictionary(_ colorCode:String, areaID:String) -> NSMutableDictionary{
         
-        var areaDefault = UserDefaults.standard
+        var checkColorCode = colorCode
+        let areaDefault = UserDefaults.standard
 
         //初期設定（全て白）
-        if colorCode == "-1" {
+        if checkColorCode == "-1" {
             
             //json.txtファイルを読み込んで
             let path = Bundle.main.path(forResource: "prefecture", ofType: "json")

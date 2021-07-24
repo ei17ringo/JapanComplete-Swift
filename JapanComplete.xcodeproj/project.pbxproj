@@ -63,6 +63,7 @@
 		19FB32971E11574C00AD8404 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FB32961E11574C00AD8404 /* SystemConfiguration.framework */; };
 		19FB32991E116C9800AD8404 /* ColorDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FB32981E116C9800AD8404 /* ColorDef.swift */; };
 		19FB329E1E1185E100AD8404 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19FB32A01E1185E100AD8404 /* Localizable.strings */; };
+		19FDB7A5263D58C4006D0637 /* settingMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FDB7A4263D58C4006D0637 /* settingMasterViewController.swift */; };
 		44ECBCD7F3FD161B97893602 /* Pods_JapanCompleteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726870F010954BBEECAC18E1 /* Pods_JapanCompleteTests.framework */; };
 		49ED31ABA7D00E39D12F142C /* Pods_JapanCompleteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BCECFAC7369ABF075C4669 /* Pods_JapanCompleteUITests.framework */; };
 		6A504AE896CA4BD30E00A07D /* Pods_JapanComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9DF283AB5C7F0C1CD29A35 /* Pods_JapanComplete.framework */; };
@@ -153,6 +154,7 @@
 		19FB32981E116C9800AD8404 /* ColorDef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDef.swift; sourceTree = "<group>"; };
 		19FB329F1E1185E100AD8404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19FB32A41E11870200AD8404 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19FDB7A4263D58C4006D0637 /* settingMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingMasterViewController.swift; sourceTree = "<group>"; };
 		726870F010954BBEECAC18E1 /* Pods_JapanCompleteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JapanCompleteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7386EC193119AFDE5A59F087 /* Pods-JapanComplete.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapanComplete.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JapanComplete/Pods-JapanComplete.debug.xcconfig"; sourceTree = "<group>"; };
 		7E5E02AA00143D60A144F68A /* Pods-JapanComplete.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapanComplete.release.xcconfig"; path = "Pods/Target Support Files/Pods-JapanComplete/Pods-JapanComplete.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				19836F761FA1AFD400F9A87B /* editCell.xib */,
 				199B934E1FA24078009BBB6D /* completeViewController.swift */,
 				199B93511FA24F37009BBB6D /* detailViewController.swift */,
+				19FDB7A4263D58C4006D0637 /* settingMasterViewController.swift */,
 			);
 			path = JapanComplete;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				19B01B301E0FCF7300AE46F8 /* ViewController.swift in Sources */,
 				1989B6281E10E455007E87B2 /* customTabBarController.swift in Sources */,
 				19D05B331E16CA2900A8778F /* helpViewController.swift in Sources */,
+				19FDB7A5263D58C4006D0637 /* settingMasterViewController.swift in Sources */,
 				199B93521FA24F37009BBB6D /* detailViewController.swift in Sources */,
 				1989B62A1E10E9D5007E87B2 /* settingViewController.swift in Sources */,
 				19FB32991E116C9800AD8404 /* ColorDef.swift in Sources */,
