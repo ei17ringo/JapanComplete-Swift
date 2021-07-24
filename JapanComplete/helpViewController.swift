@@ -1,4 +1,6 @@
 import UIKit
+import FontAwesome_swift
+
 class helpViewController: UIViewController, UIScrollViewDelegate {
 	let backgroundColor = UIColor(red: 97.0/255.0, green: 142.0/255.0, blue: 218.0/255.0, alpha: 1.0)
 	let slides = [
@@ -43,9 +45,13 @@ class helpViewController: UIViewController, UIScrollViewDelegate {
         dots?.addTarget(self, action: #selector(self.swipe(sender:)), for: UIControl.Event.valueChanged)
 		let closeButton = UIButton()
 		closeButton.frame = CGRect(x: screen.width - 70, y: 20, width: 60, height: 60)
-		closeButton.setTitle("Skip", for: .normal)
-		closeButton.setTitleColor(UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 0.5), for: .normal)
-		closeButton.titleLabel!.font =  UIFont.systemFont(ofSize: 16)
+		
+//        closeButton.setTitle("Skip", for: .normal)
+        closeButton.titleLabel?.font = UIFont.fontAwesome(ofSize: 24, style: .regular)
+        closeButton.setTitle(String.fontAwesomeIcon(name: .windowClose), for: .normal)
+        
+		closeButton.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+//		closeButton.titleLabel!.font =  UIFont.systemFont(ofSize: 16)
         closeButton.addTarget(self, action: #selector(self.pressed(sender:)), for: .touchUpInside)
 		view.addSubview(closeButton)
 	}
