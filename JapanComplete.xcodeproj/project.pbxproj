@@ -58,7 +58,11 @@
 		19B01BBB1E0FD0C100AE46F8 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B01BA41E0FD0C000AE46F8 /* share@2x.png */; };
 		19B01BBC1E0FD0C100AE46F8 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 19B01BA51E0FD0C000AE46F8 /* test.png */; };
 		19B01BBE1E10DF0B00AE46F8 /* historyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B01BBD1E10DF0B00AE46F8 /* historyViewController.swift */; };
+		19CBA0ED26AEF8B8003AE455 /* settingColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBA0EC26AEF8B8003AE455 /* settingColorViewController.swift */; };
 		19D05B331E16CA2900A8778F /* helpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D05B311E16CA2900A8778F /* helpViewController.swift */; };
+		19D78D8926AFEA030083C60A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19D78D8826AFEA030083C60A /* GoogleService-Info.plist */; };
+		19D78D8B26AFFF5B0083C60A /* ExtentionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D78D8A26AFFF5B0083C60A /* ExtentionViewController.swift */; };
+		19D78D8D26B001360083C60A /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D78D8C26B001360083C60A /* GlobalVariable.swift */; };
 		19FB32951E11573900AD8404 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FB32941E11573900AD8404 /* StoreKit.framework */; };
 		19FB32971E11574C00AD8404 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FB32961E11574C00AD8404 /* SystemConfiguration.framework */; };
 		19FB32991E116C9800AD8404 /* ColorDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FB32981E116C9800AD8404 /* ColorDef.swift */; };
@@ -148,7 +152,11 @@
 		19B01BA41E0FD0C000AE46F8 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
 		19B01BA51E0FD0C000AE46F8 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		19B01BBD1E10DF0B00AE46F8 /* historyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = historyViewController.swift; sourceTree = "<group>"; };
+		19CBA0EC26AEF8B8003AE455 /* settingColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingColorViewController.swift; sourceTree = "<group>"; };
 		19D05B311E16CA2900A8778F /* helpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helpViewController.swift; sourceTree = "<group>"; };
+		19D78D8826AFEA030083C60A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		19D78D8A26AFFF5B0083C60A /* ExtentionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionViewController.swift; sourceTree = "<group>"; };
+		19D78D8C26B001360083C60A /* GlobalVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
 		19FB32941E11573900AD8404 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		19FB32961E11574C00AD8404 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		19FB32981E116C9800AD8404 /* ColorDef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDef.swift; sourceTree = "<group>"; };
@@ -237,6 +245,7 @@
 		19B01B2C1E0FCF7200AE46F8 /* JapanComplete */ = {
 			isa = PBXGroup;
 			children = (
+				19D78D8A26AFFF5B0083C60A /* ExtentionViewController.swift */,
 				19D05B311E16CA2900A8778F /* helpViewController.swift */,
 				19B01B2D1E0FCF7300AE46F8 /* AppDelegate.swift */,
 				19B01B2F1E0FCF7300AE46F8 /* ViewController.swift */,
@@ -254,6 +263,9 @@
 				199B934E1FA24078009BBB6D /* completeViewController.swift */,
 				199B93511FA24F37009BBB6D /* detailViewController.swift */,
 				19FDB7A4263D58C4006D0637 /* settingMasterViewController.swift */,
+				19CBA0EC26AEF8B8003AE455 /* settingColorViewController.swift */,
+				19D78D8826AFEA030083C60A /* GoogleService-Info.plist */,
+				19D78D8C26B001360083C60A /* GlobalVariable.swift */,
 			);
 			path = JapanComplete;
 			sourceTree = "<group>";
@@ -494,6 +506,7 @@
 				19B01B351E0FCF7300AE46F8 /* Assets.xcassets in Resources */,
 				19B01BAE1E0FD0C000AE46F8 /* Icon-76.png in Resources */,
 				19B01BAB1E0FD0C000AE46F8 /* Icon-40@3x.png in Resources */,
+				19D78D8926AFEA030083C60A /* GoogleService-Info.plist in Resources */,
 				19FB329E1E1185E100AD8404 /* Localizable.strings in Resources */,
 				19B01BB01E0FD0C000AE46F8 /* Icon-Small.png in Resources */,
 				19B01BB31E0FD0C000AE46F8 /* icon29@2x.png in Resources */,
@@ -533,6 +546,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JapanComplete/Pods-JapanComplete-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/APNGKit/APNGKit.framework",
 				"${BUILT_PRODUCTS_DIR}/EasyTipView/EasyTipView.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -542,6 +556,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APNGKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyTipView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -620,11 +635,14 @@
 				19D05B331E16CA2900A8778F /* helpViewController.swift in Sources */,
 				19FDB7A5263D58C4006D0637 /* settingMasterViewController.swift in Sources */,
 				199B93521FA24F37009BBB6D /* detailViewController.swift in Sources */,
+				19D78D8B26AFFF5B0083C60A /* ExtentionViewController.swift in Sources */,
 				1989B62A1E10E9D5007E87B2 /* settingViewController.swift in Sources */,
 				19FB32991E116C9800AD8404 /* ColorDef.swift in Sources */,
 				199B934F1FA24079009BBB6D /* completeViewController.swift in Sources */,
 				19B01B2E1E0FCF7300AE46F8 /* AppDelegate.swift in Sources */,
 				19836F751FA1AFAD00F9A87B /* EditTableViewCell.swift in Sources */,
+				19D78D8D26B001360083C60A /* GlobalVariable.swift in Sources */,
+				19CBA0ED26AEF8B8003AE455 /* settingColorViewController.swift in Sources */,
 				1928C0431F54349700FF67C6 /* wikiViewController.swift in Sources */,
 				19B01BBE1E10DF0B00AE46F8 /* historyViewController.swift in Sources */,
 			);

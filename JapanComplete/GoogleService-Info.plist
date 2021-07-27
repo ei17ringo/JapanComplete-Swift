@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>282936289149-s8s44n1uuo5j18ttkd8h8es0u3jc54tc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.282936289149-s8s44n1uuo5j18ttkd8h8es0u3jc54tc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCtVvfJxJAOs5PDh-Qm4CpMg7kg7SopNzA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>282936289149</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.erikoichinohe.JapanComplete</string>
+	<key>PROJECT_ID</key>
+	<string>japancompleteproject</string>
+	<key>STORAGE_BUCKET</key>
+	<string>japancompleteproject.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:282936289149:ios:a950c2c343bc2954</string>
+	<key>DATABASE_URL</key>
+	<string>https://japancompleteproject.firebaseio.com</string>
+	<key>ADMOB_APP_ID</key>
+	<string>ca-app-pub-2022584086765592~2331284263</string>
+</dict>
+</plist>
