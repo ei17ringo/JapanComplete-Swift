@@ -12,12 +12,17 @@ class settingMasterViewController: UIViewController,UITableViewDelegate,UITableV
 
     @IBOutlet weak var settingTableView: UITableView!
     
-    let menuArray = ["カラーパターン設定","色定義文変更"]
+    let menuArray = [NSLocalizedString("ColorPattern", comment: ""),NSLocalizedString("ColorDefinition", comment: "")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setUpperBar()
+     
+        //広告表示
+        let app:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        app.viewAdmob(self)
     }
     
     
@@ -32,9 +37,9 @@ class settingMasterViewController: UIViewController,UITableViewDelegate,UITableV
     /*
      セクションのタイトルを返す.
      */
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "色"
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "色"
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

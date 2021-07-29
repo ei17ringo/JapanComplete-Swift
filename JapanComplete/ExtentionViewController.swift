@@ -11,12 +11,15 @@ import GoogleMobileAds
 
 extension UIViewController:GADBannerViewDelegate {
     //画面上部のデザイン設定
-    func setUpperBar(){
+    func setUpperBar(title:String = "setting"){
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: basecolorCode, alpha: 1)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-                self.navigationItem.title = NSLocalizedString("setting", comment: "")
-        
+        self.navigationItem.title = NSLocalizedString(title, comment: "")
+    }
+ 
+    func setTabBarColor(){
+        self.tabBarController?.tabBar.barTintColor = UIColor.hex(hexStr: basecolorCode, alpha: 1)
     }
 }

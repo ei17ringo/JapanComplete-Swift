@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class historyViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,GADBannerViewDelegate {
+class historyViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var listTypeSegment: UISegmentedControl!
     
@@ -22,9 +22,7 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpperBar()
-        
-        
+                
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +35,7 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         //データの表示
         setTableData()
 
-        
+        setUpperBar()
 
     }
     
@@ -214,15 +212,15 @@ class historyViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
     }
     
-    //画面上部のデザイン設定
-    func setUpperBar(){
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-//        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-//        self.navigationItem.title = NSLocalizedString("mapTitle", comment: "")
-        
-    }
+//    //画面上部のデザイン設定
+//    func setUpperBar(){
+//
+//        self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
+//        self.navigationController?.navigationBar.tintColor = UIColor.white
+////        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+////        self.navigationItem.title = NSLocalizedString("mapTitle", comment: "")
+//
+//    }
     
 
     

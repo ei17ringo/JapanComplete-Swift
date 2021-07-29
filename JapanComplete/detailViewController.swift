@@ -8,7 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
-class detailViewController: UIViewController,GADBannerViewDelegate {
+class detailViewController: UIViewController {
 
     @IBOutlet weak var detailImage: UIImageView!
     var displayFileName = ""

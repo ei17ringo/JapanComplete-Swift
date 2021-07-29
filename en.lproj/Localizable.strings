@@ -109,3 +109,12 @@
 "KumamotoGift" = "Aso_Caldera";
 "KagoshimaGift" = "Green_sea_turtle";
 "OkinawaGift" = "Hateruma";
+
+"ColorPattern" = "Color Pattern";
+"ColorDefinition" = "Color Definition";
+
+"Orange" = "🍊Orange";
+"Green" = "🍀Green";
+"Yellow" = "🌕Yellow";
+"Pink" = "💗Pink";
+"Blue" = "🔵Blue（Default）";

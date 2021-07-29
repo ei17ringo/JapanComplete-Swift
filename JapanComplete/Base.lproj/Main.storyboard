@@ -278,7 +278,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="81J-gk-uLn">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="459"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ZIW-Nf-Q2B">
@@ -301,7 +301,8 @@
                             <constraint firstItem="81J-gk-uLn" firstAttribute="centerX" secondItem="PA5-eX-Y18" secondAttribute="centerX" id="6bE-2c-ZST"/>
                             <constraint firstItem="81J-gk-uLn" firstAttribute="leading" secondItem="PA5-eX-Y18" secondAttribute="leadingMargin" constant="-16" id="8Zb-au-Jwx"/>
                             <constraint firstItem="81J-gk-uLn" firstAttribute="top" secondItem="PA5-eX-Y18" secondAttribute="topMargin" constant="-44" id="rgy-M6-PsC"/>
-                            <constraint firstItem="81J-gk-uLn" firstAttribute="centerY" secondItem="PA5-eX-Y18" secondAttribute="centerY" id="rnJ-ui-u3d"/>
+                            <constraint firstItem="81J-gk-uLn" firstAttribute="centerY" secondItem="PA5-eX-Y18" secondAttribute="centerY" constant="-54.5" id="rnJ-ui-u3d"/>
+                            <constraint firstItem="mLz-vP-zUl" firstAttribute="top" secondItem="81J-gk-uLn" secondAttribute="bottom" constant="60" id="suq-3h-ipw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MdL-8I-YUt"/>
@@ -405,7 +406,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="syw-is-jYy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="459"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="hgr-dx-CzS">
@@ -425,8 +426,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kh6-Ux-WMe" firstAttribute="top" secondItem="syw-is-jYy" secondAttribute="bottom" constant="60" id="3G0-7U-6Uu"/>
                             <constraint firstItem="syw-is-jYy" firstAttribute="centerX" secondItem="zkl-4B-t2Z" secondAttribute="centerX" id="HwY-XU-T90"/>
-                            <constraint firstItem="syw-is-jYy" firstAttribute="centerY" secondItem="zkl-4B-t2Z" secondAttribute="centerY" id="IDq-5l-Gbv"/>
+                            <constraint firstItem="syw-is-jYy" firstAttribute="centerY" secondItem="zkl-4B-t2Z" secondAttribute="centerY" constant="-54.5" id="IDq-5l-Gbv"/>
                             <constraint firstItem="syw-is-jYy" firstAttribute="leading" secondItem="zkl-4B-t2Z" secondAttribute="leadingMargin" constant="-16" id="ap5-Fo-hOn"/>
                             <constraint firstItem="syw-is-jYy" firstAttribute="top" secondItem="zkl-4B-t2Z" secondAttribute="topMargin" constant="-44" id="dvk-UX-wpv"/>
                         </constraints>

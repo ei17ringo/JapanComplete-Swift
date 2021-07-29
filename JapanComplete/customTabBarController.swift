@@ -17,7 +17,9 @@ class customTabBarController: UITabBarController {
         super.init(coder: aDecoder)
     
         self.tabBar.frame = CGRect(x:0, y:self.view.frame.size.height - 100,width: self.view.frame.size.width,height: 50);
-        self.tabBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
+        
+//        self.tabBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
+        self.tabBar.barTintColor = UIColor.hex(hexStr: basecolorCode, alpha: 1)
         self.tabBar.tintColor = UIColor.white
         
         
@@ -46,6 +48,10 @@ class customTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("tab")
     }
     
 

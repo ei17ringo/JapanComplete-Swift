@@ -12,7 +12,7 @@ import GoogleMobileAds
 import Accounts
 
 
-class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
+class ViewController: UIViewController,UIWebViewDelegate {
 
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var mapWebView: UIWebView!
@@ -32,7 +32,9 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         super.viewDidLoad()
         
         //画面上部のデザイン設定
-        setUpperBar()
+        setUpperBar(title: "mapTitle")
+        setUpperBarButton()
+        setTabBarColor()
         
         //初期表示はUserDefaultに値を作成
         //エリアの記録情報を取得
@@ -44,22 +46,29 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
         if (myDefault.object(forKey: "colorDef") != nil){
             color = myDefault.object(forKey:"colorDef") as! [[String : String]]
         }
+        
         //map表示
         viewMap()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //広告表示
-        let app:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
-        app.viewAdmob(self)
+        //画面上部のデザイン設定
+        setUpperBar(title: "mapTitle")
+
         
         var myDefault = UserDefaults.standard
         if (myDefault.object(forKey: "colorDef") != nil){
             color = myDefault.object(forKey:"colorDef") as! [[String : String]]
         }
+//        //map表示
+//        viewMap()
         
+        //広告表示
+        let app:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        app.viewAdmob(self)
+                
         for eachcolor in color{
             
             
@@ -67,6 +76,24 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
             
             mapWebView.stringByEvaluatingJavaScript(from: cmd)
         }
+        
+        
+        var keys:NSArray = colorArea.allKeys as NSArray
+
+        
+        var command:String = "setcolordefinition('\(lowColorCode)','\(midColorCode)','\(highColorCode)');"
+        mapWebView.stringByEvaluatingJavaScript(from: command)
+        
+        
+        for i in 0 ..< (keys.count) {
+            var key:String = keys[i] as! String
+            var value:String = String(describing: colorArea.object(forKey: key)!)
+
+            var command:String = "setcolor('\(value)','\(key)','\(settingColorName)','\(lowColorCode)','\(midColorCode)','\(highColorCode)');"
+
+            mapWebView.stringByEvaluatingJavaScript(from: command)
+        }
+
 
     }
 
@@ -197,20 +224,29 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
     }
     
     // 画面上部のデザイン設定
-    func setUpperBar(){
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        self.navigationItem.title = NSLocalizedString("mapTitle", comment: "")
-        
-//        helpButton.setFAIcon(icon: FAType.FAQuestionCircleO, forState: .normal)
-//        shareButton.setFAIcon(icon: FAType.FAShareSquareO, forState: .normal)
-        
+//    func setUpperBar(){
+//
+//        self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
+//        self.navigationController?.navigationBar.tintColor = UIColor.white
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+//        self.navigationItem.title = NSLocalizedString("mapTitle", comment: "")
+//
+////        helpButton.setFAIcon(icon: FAType.FAQuestionCircleO, forState: .normal)
+////        shareButton.setFAIcon(icon: FAType.FAShareSquareO, forState: .normal)
+//
+//        helpButton.titleLabel?.font = UIFont.fontAwesome(ofSize: 26, style: .regular)
+//        helpButton.setTitle(String.fontAwesomeIcon(name: .questionCircle), for: .normal)
+//
+////        helpButton.setTitle(String.fontAwesomeIcon(name: .questionCircle), for: .normal)
+//        shareButton.titleLabel?.font = UIFont.fontAwesome(ofSize: 26, style: .regular)
+//        shareButton.setTitle(String.fontAwesomeIcon(name: .shareSquare), for: .normal)
+//    }
+    
+    func setUpperBarButton(){
+      
         helpButton.titleLabel?.font = UIFont.fontAwesome(ofSize: 26, style: .regular)
         helpButton.setTitle(String.fontAwesomeIcon(name: .questionCircle), for: .normal)
         
-//        helpButton.setTitle(String.fontAwesomeIcon(name: .questionCircle), for: .normal)
         shareButton.titleLabel?.font = UIFont.fontAwesome(ofSize: 26, style: .regular)
         shareButton.setTitle(String.fontAwesomeIcon(name: .shareSquare), for: .normal)
     }
@@ -244,11 +280,16 @@ class ViewController: UIViewController,UIWebViewDelegate,GADBannerViewDelegate {
 
         var keys:NSArray = colorArea.allKeys as NSArray
 
+        
+        var command:String = "setcolordefinition('\(lowColorCode)','\(midColorCode)','\(highColorCode)');"
+        mapWebView.stringByEvaluatingJavaScript(from: command)
+        
+        
         for i in 0 ..< (keys.count) {
             var key:String = keys[i] as! String
             var value:String = String(describing: colorArea.object(forKey: key)!)
 
-            var command:String = "setcolor('\(value)','\(key)');"
+            var command:String = "setcolor('\(value)','\(key)','\(settingColorName)','\(lowColorCode)','\(midColorCode)','\(highColorCode)');"
 
             mapWebView.stringByEvaluatingJavaScript(from: command)
         }

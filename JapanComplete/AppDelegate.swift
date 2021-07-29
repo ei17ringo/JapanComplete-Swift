@@ -20,6 +20,82 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GADBannerViewDelegate {
         // Override point for customization after application launch.
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         FirebaseApp.configure()
+        
+        if UserDefaults.standard.string(forKey: "colorSelection") == nil {
+            UserDefaults.standard.setValue("Blue", forKey: "colorSelection")
+        }else{
+            settingColorName = UserDefaults.standard.string(forKey: "colorSelection") ?? "Blue"
+        }
+        
+        
+        switch settingColorName {
+        case "Orange":
+            if let index = orangeDefColorCode.firstIndex(where: { $0.key == "base"}) {
+                basecolorCode = orangeDefColorCode[index].value
+            }
+            if let index = orangeDefColorCode.firstIndex(where: { $0.key == "low"}) {
+                lowColorCode = orangeDefColorCode[index].value
+            }
+            if let index = orangeDefColorCode.firstIndex(where: { $0.key == "mid"}) {
+                midColorCode = orangeDefColorCode[index].value
+            }
+            if let index = orangeDefColorCode.firstIndex(where: { $0.key == "high"}) {
+                highColorCode = orangeDefColorCode[index].value
+            }
+        case "Yellow":
+            if let index = yellowDefColorCode.firstIndex(where: { $0.key == "base"}) {
+                basecolorCode = yellowDefColorCode[index].value
+            }
+            if let index = yellowDefColorCode.firstIndex(where: { $0.key == "low"}) {
+                lowColorCode = yellowDefColorCode[index].value
+            }
+            if let index = yellowDefColorCode.firstIndex(where: { $0.key == "mid"}) {
+                midColorCode = yellowDefColorCode[index].value
+            }
+            if let index = yellowDefColorCode.firstIndex(where: { $0.key == "high"}) {
+                highColorCode = yellowDefColorCode[index].value
+            }
+        case "Green":
+            if let index = greenDefColorCode.firstIndex(where: { $0.key == "base"}) {
+                basecolorCode = greenDefColorCode[index].value
+            }
+            if let index = greenDefColorCode.firstIndex(where: { $0.key == "low"}) {
+                lowColorCode = greenDefColorCode[index].value
+            }
+            if let index = greenDefColorCode.firstIndex(where: { $0.key == "mid"}) {
+                midColorCode = greenDefColorCode[index].value
+            }
+            if let index = greenDefColorCode.firstIndex(where: { $0.key == "high"}) {
+                highColorCode = greenDefColorCode[index].value
+            }
+        case "Pink":
+            if let index = pinkDefColorCode.firstIndex(where: { $0.key == "base"}) {
+                basecolorCode = pinkDefColorCode[index].value
+            }
+            if let index = pinkDefColorCode.firstIndex(where: { $0.key == "low"}) {
+                lowColorCode = pinkDefColorCode[index].value
+            }
+            if let index = pinkDefColorCode.firstIndex(where: { $0.key == "mid"}) {
+                midColorCode = pinkDefColorCode[index].value
+            }
+            if let index = pinkDefColorCode.firstIndex(where: { $0.key == "high"}) {
+                highColorCode = pinkDefColorCode[index].value
+            }
+        default:
+            if let index = blueDefColorCode.firstIndex(where: { $0.key == "base"}) {
+                basecolorCode = blueDefColorCode[index].value
+            }
+            if let index = blueDefColorCode.firstIndex(where: { $0.key == "low"}) {
+                lowColorCode = blueDefColorCode[index].value
+            }
+            if let index = blueDefColorCode.firstIndex(where: { $0.key == "mid"}) {
+                midColorCode = blueDefColorCode[index].value
+            }
+            if let index = blueDefColorCode.firstIndex(where: { $0.key == "high"}) {
+                highColorCode = blueDefColorCode[index].value
+            }
+        }
+        
         return true
     }
 

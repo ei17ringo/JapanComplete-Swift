@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class settingViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,GADBannerViewDelegate {
+class settingViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
     @IBOutlet weak var editButton: UIBarButtonItem!
     
     @IBOutlet weak var settingTable: UITableView!
@@ -19,7 +19,7 @@ class settingViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpperBar()
+        setUpperBar(title: "ColorDefinition")
 
         let nib = UINib(nibName: "editCell", bundle: nil)
         settingTable.register(nib, forCellReuseIdentifier: "Cell")
@@ -47,9 +47,9 @@ class settingViewController: UIViewController,UITableViewDelegate,UITableViewDat
     /*
      セクションのタイトルを返す.
      */
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionTitle[section] as? String
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return sectionTitle[section] as? String
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -58,11 +58,11 @@ class settingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         var bgcolor = "#c6d3db"
         switch indexPath.row {
         case 0:
-            bgcolor = "#a7c2ee"
+            bgcolor = lowColorCode
         case 1:
-            bgcolor = "#618eda"
+            bgcolor = midColorCode
         case 2:
-            bgcolor = "#3b4faf"
+            bgcolor = highColorCode
         default:
             bgcolor = "#c6d3db"
         }
@@ -100,15 +100,15 @@ class settingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         return newLength <= 10 // Bool
     }
     
-    //画面上部のデザイン設定
-    func setUpperBar(){
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-                self.navigationItem.title = NSLocalizedString("setting", comment: "")
-        
-    }
+//    //画面上部のデザイン設定
+//    func setUpperBar(){
+//
+//        self.navigationController?.navigationBar.barTintColor = UIColor.hex(hexStr: "#618eda", alpha: 1)
+//        self.navigationController?.navigationBar.tintColor = UIColor.white
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+//                self.navigationItem.title = NSLocalizedString("setting", comment: "")
+//
+//    }
     
     @IBAction func tapEditButton(_ sender: UIBarButtonItem) {
         

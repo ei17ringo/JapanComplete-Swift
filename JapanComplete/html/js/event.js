@@ -4,6 +4,11 @@ const VISIT_COLOR = '#a7c2ee';
 const TRAVEL_COLOR = '#618eda';
 const STAY_COLOR = '#3b4faf';
 
+var default_color = DEFAULT_COLOR;
+var low = VISIT_COLOR;
+var mid = TRAVEL_COLOR;
+var high = STAY_COLOR;
+
 window.addEventListener("touchend", function() {
                           init();
                           }, false);
@@ -141,36 +146,36 @@ function init(){
 }
 
 function fill_path(newpath){
-    
+
     
 	//newpath.addEventListener("click", function(){
 
 	var colorcode = newpath.getAttribute("fill");
 	var area_id = newpath.getAttribute("id");
-	var changecolorcode = DEFAULT_COLOR;
+	var changecolorcode = default_color;
 	var code = 0;
 
     //alert(colorcode);
     
     switch (colorcode) {
-        case DEFAULT_COLOR:
-            changecolorcode = VISIT_COLOR;
+        case default_color:
+            changecolorcode = low;
             code = 1;
             break;
-        case VISIT_COLOR:
-            changecolorcode = TRAVEL_COLOR;
+        case low:
+            changecolorcode = mid;
             code = 2;
             break;
-        case TRAVEL_COLOR:
-            changecolorcode = STAY_COLOR;
+        case mid:
+            changecolorcode = high;
             code = 3;
             break;
-        case STAY_COLOR:
-            changecolorcode = DEFAULT_COLOR;
+        case high:
+            changecolorcode = default_color;
             code = 0;
             break;
         default:
-            changecolorcode = DEFAULT_COLOR;
+            changecolorcode = default_color;
             code = 0;
             break;
     
@@ -219,7 +224,30 @@ function fill_path(newpath){
 
 }
 
-function setcolor(code,area_id){
+
+//定義色のセット
+function setcolordefinition(color_low,color_mid,color_high){
+ 
+    newpath = document.getElementById("low_def");
+    newpath.setAttribute("fill", color_low);
+    
+    newpath = document.getElementById("mid_def");
+    newpath.setAttribute("fill", color_mid);
+    
+    newpath = document.getElementById("high_def");
+    newpath.setAttribute("fill", color_high);
+}
+
+//地図色のセット
+function setcolor(code,area_id,colorname,color_low,color_mid,color_high){
+    
+
+    
+    if (colorname != "Blue"){
+        low = color_low;
+        mid = color_mid;
+        high = color_high;
+    }
     
     
     //alert(area_id+code);
@@ -229,20 +257,20 @@ function setcolor(code,area_id){
 
     switch (code) {
         case '0':
-  			changecolorcode = DEFAULT_COLOR;
+  			changecolorcode = default_color;
   			break;
 		case '1':
-			changecolorcode = VISIT_COLOR;
+			changecolorcode = low;
 			break;
 		case '2':
-			changecolorcode = TRAVEL_COLOR;
+			changecolorcode = mid;
 			break;
         case '3':
-            changecolorcode = STAY_COLOR;
+            changecolorcode = high;
             code = 0;
             break;
 		default :
-			changecolorcode = DEFAULT_COLOR;
+			changecolorcode = default_color;
 			break;
     }
     

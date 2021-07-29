@@ -109,3 +109,12 @@
 "KumamotoGift" = "大観峰";
 "KagoshimaGift" = "アオウミガメ";
 "OkinawaGift" = "久高島";
+
+
+"ColorPattern" = "カラーパターン";
+"ColorDefinition" = "色定義";
+"Orange" = "🍊オレンジ";
+"Green" = "🍀みどり";
+"Yellow" = "🌕黄色";
+"Pink" = "💗ピンク";
+"Blue" = "🔵青（デフォルト）";

@@ -11,7 +11,7 @@ import Spring
 import EasyTipView
 import GoogleMobileAds
 
-class completeViewController: UIViewController ,EasyTipViewDelegate,GADBannerViewDelegate,UIWebViewDelegate{
+class completeViewController: UIViewController ,EasyTipViewDelegate,UIWebViewDelegate{
     
     var displayedName = ""
     
